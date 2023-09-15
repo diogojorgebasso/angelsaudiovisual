@@ -11,11 +11,11 @@ export default function Home() {
 
       <div className=" place-items-center before:absolute ">
         <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70]"
+          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] w-full h-auto"
           src="/angels.png"
           alt="Logo da Angels"
-          width={180}
-          height={37}
+          height={300}
+          width={300}
           priority
         />
       </div>
