@@ -18,3 +18,5 @@ jobs:
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_ANGELS_AUDIOVISUAL }}'
           channelId: live
           projectId: angels-audiovisual
+          env:
+            FIREBASE_CLI_EXPERIMENTS: webframeworks
