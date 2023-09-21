@@ -3,8 +3,8 @@
 // imagem desfocada no fundo e à medida que o usuário move o mouse em direção ao botão de produtos, a imagem se torna mais nítida. O texto vai trocando também.
 
 import { Container, Title, Text, Button, Group } from "@mantine/core";
-import { Illustration } from "../../components/Error/Illustration";
-import classes from "../../components/Error/NothingFoundBackgroung.module.css";
+import { Illustration } from "../components/Error/Illustration";
+import classes from "../components/Error/NothingFoundBackgroung.module.css";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 

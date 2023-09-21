@@ -1,13 +1,17 @@
 import React from "react";
-import '@mantine/core/styles.css';
 
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+// UI
+import '@mantine/core/styles.css';
 import { MantineProvider, ColorSchemeScript } from "@mantine/core";
+import { theme } from "../theme";
+import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
-import { HeaderMenu } from "../../components/Menu/HeaderMenu";
+
+//SEO
+import type { Metadata } from "next";
+
+import { HeaderMenu } from "../components/Menu/HeaderMenu";
 import { AuthContextProvider } from "../context/AuthContext";
-import { theme } from "../../theme";
 
 export const metadata: Metadata = {
   title: "Angels Audiovisual - Produtora de Eventos",

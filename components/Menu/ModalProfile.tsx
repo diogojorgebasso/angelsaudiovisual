@@ -27,7 +27,7 @@ import {
 import { useDisclosure } from "@mantine/hooks";
 import cx from "clsx";
 
-import { useAuthContext } from "../../src/context/AuthContext";
+import { useAuthContext } from "../../context/AuthContext";
 
 //css
 import classes from "./ModalProfile.module.css";
@@ -68,7 +68,6 @@ export default function ModalProfile() {
                 </Text>
                 <FaRegArrowAltCircleDown
                   style={{ width: rem(12), height: rem(12) }}
-                  stroke={1.5}
                 />
               </Group>
             </UnstyledButton>
@@ -78,7 +77,6 @@ export default function ModalProfile() {
               leftSection={
                 <FaHeart
                   style={{ width: rem(16), height: rem(16) }}
-                  stroke={1.5}
                 />
               }
             >
@@ -88,7 +86,6 @@ export default function ModalProfile() {
               leftSection={
                 <FaBookmark
                   style={{ width: rem(16), height: rem(16) }}
-                  stroke={1.5}
                 />
               }
             >
@@ -98,7 +95,6 @@ export default function ModalProfile() {
               leftSection={
                 <FaCommentDots
                   style={{ width: rem(16), height: rem(16) }}
-                  stroke={1.5}
                 />
               }
             >
@@ -110,7 +106,6 @@ export default function ModalProfile() {
               leftSection={
                 <FaSyncAlt
                   style={{ width: rem(16), height: rem(16) }}
-                  stroke={1.5}
                 />
               }
             >
@@ -120,7 +115,6 @@ export default function ModalProfile() {
               leftSection={
                 <FaPeopleArrows
                   style={{ width: rem(16), height: rem(16) }}
-                  stroke={1.5}
                 />
               }
             >
@@ -130,7 +124,6 @@ export default function ModalProfile() {
               leftSection={
                 <FaSignInAlt
                   style={{ width: rem(16), height: rem(16) }}
-                  stroke={1.5}
                 />
               }
             >
@@ -144,7 +137,6 @@ export default function ModalProfile() {
               leftSection={
                 <FaSyncAlt
                   style={{ width: rem(16), height: rem(16) }}
-                  stroke={1.5}
                 />
               }
             >
@@ -155,7 +147,6 @@ export default function ModalProfile() {
               leftSection={
                 <FaTrashAlt
                   style={{ width: rem(16), height: rem(16) }}
-                  stroke={1.5}
                 />
               }
             >

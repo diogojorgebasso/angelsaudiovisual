@@ -1,4 +1,5 @@
 "use client";
+
 import {
   HoverCard,
   Group,
@@ -18,8 +19,11 @@ import {
   rem,
   useMantineTheme,
 } from "@mantine/core";
+
 import Image from "next/image";
+
 import { useDisclosure } from "@mantine/hooks";
+
 import {
   FaTv,
   FaCameraRetro,
@@ -29,10 +33,12 @@ import {
   FaPlane,
   FaRegArrowAltCircleDown,
 } from "react-icons/fa";
+
 import classes from "./HeaderMenu.module.css";
+
 import ModalProfile from "./ModalProfile";
 
-import { useAuthContext } from "../../src/context/AuthContext";
+import { useAuthContext } from "../../context/AuthContext";
 
 const mockdata = [
   {
@@ -99,34 +105,23 @@ export function HeaderMenu() {
   ));
 
   return (
-    <Box pb={120}>
+ <Box pb={120}>
       <header className={classes.header}>
         <Group justify="space-between" h="100%">
-          <Image
-            src={"/angels.png"}
-            width={500}
-            height={500}
-            alt="logo da Angels"
-          />
+          <MantineLogo size={30} />
 
           <Group h="100%" gap={0} visibleFrom="sm">
             <a href="#" className={classes.link}>
               Home
             </a>
-            <HoverCard
-              width={600}
-              position="bottom"
-              radius="md"
-              shadow="md"
-              withinPortal
-            >
+            <HoverCard width={600} position="bottom" radius="md" shadow="md" withinPortal>
               <HoverCard.Target>
                 <a href="#" className={classes.link}>
                   <Center inline>
                     <Box component="span" mr={5}>
-                      Produtos
+                      Features
                     </Box>
-                    <FaRegArrowAltCircleDown
+                    <IconChevronDown
                       style={{ width: rem(16), height: rem(16) }}
                       color={theme.colors.blue[6]}
                     />
@@ -134,11 +129,11 @@ export function HeaderMenu() {
                 </a>
               </HoverCard.Target>
 
-              <HoverCard.Dropdown style={{ overflow: "hidden" }}>
+              <HoverCard.Dropdown style={{ overflow: 'hidden' }}>
                 <Group justify="space-between" px="md">
-                  <Text fw={500}>Produtos</Text>
-                  <Anchor href="/produtos" fz="xs">
-                    Ver todos
+                  <Text fw={500}>Features</Text>
+                  <Anchor href="#" fz="xs">
+                    View all
                   </Anchor>
                 </Group>
 
@@ -152,16 +147,13 @@ export function HeaderMenu() {
                   <Group justify="space-between">
                     <div>
                       <Text fw={500} fz="sm">
-                        Quero mais opções
+                        Get started
                       </Text>
                       <Text size="xs" c="dimmed">
-                        Se as opções acima não te atenderam, clique no botão ao
-                        lado e veja mais opções.
+                        Their food sources have decreased, and their numbers
                       </Text>
                     </div>
-                    <Button component="a" href="/produtos" variant="default">
-                      Mais Opções
-                    </Button>
+                    <Button variant="default">Get started</Button>
                   </Group>
                 </div>
               </HoverCard.Dropdown>
@@ -175,21 +167,11 @@ export function HeaderMenu() {
           </Group>
 
           <Group visibleFrom="sm">
-            {user ? (
-              <>
-                <Button variant="default">Entrar</Button>
-                <Button>Cadastro</Button>
-              </>
-            ) : (
-              <ModalProfile />
-            )}
+            <Button variant="default">Log in</Button>
+            <Button>Sign up</Button>
           </Group>
 
-          <Burger
-            opened={drawerOpened}
-            onClick={toggleDrawer}
-            hiddenFrom="sm"
-          />
+          <Burger opened={drawerOpened} onClick={toggleDrawer} hiddenFrom="sm" />
         </Group>
       </header>
 
@@ -213,7 +195,7 @@ export function HeaderMenu() {
               <Box component="span" mr={5}>
                 Features
               </Box>
-              <FaRegArrowAltCircleDown
+              <IconChevronDown
                 style={{ width: rem(16), height: rem(16) }}
                 color={theme.colors.blue[6]}
               />
