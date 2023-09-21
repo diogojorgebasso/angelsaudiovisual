@@ -1,26 +1,45 @@
 import Image from 'next/image'
+   import { Picture } from "@astrojs/image/components";
+import AngelsLogo from "/angels.png";
+import HeroImage from "~/components/hero-image.astro";
+import Starfield from "~/components/starfield.astro";
+
+const sizes = "(min-width: 640px) 42vw, 67vw";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Em breve uma nova experiência Audiovisual.
-        </p>
+<main className="relative h-full bg-black">
+  <Starfield />
+  <div id="splash-bg-fallback" className="absolute inset-0 hidden opacity-40">
+    <HeroImage />
+  </div>
+  <div className="relative grid h-full place-items-center sm:grid-cols-2">
+    <h2
+      className="flex flex-col gap-2 self-end sm:gap-4 sm:self-auto sm:justify-self-end"
+    >
+      <Icon name="logomark" className="h-24 text-white md:h-32" />
+      <div
+        className="gradient-text text-center font-extrabold tracking-tighter text-8xl"
+      >
+        Build fast
+        <br /> websites,
+        <br /> faster.
       </div>
-
-      <div className=" place-items-center before:absolute ">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] w-full h-auto"
-          src="/angels.png"
-          alt="Logo da Angels"
-          height={300}
-          width={300}
-          priority
-        />
-      </div>
-
-      
-    </main>
+    </h2>
+    <div
+      id="angel"
+      className="w-2/3 max-w-3xl self-start sm:w-10/12 sm:self-auto sm:justify-self-start"
+    >
+      <Image
+        className="h-full w-full object-cover"
+        src={AngelsLogo}
+        width={450}
+        height={800}
+        loading="eager"
+        alt="A logo da Angels mexendo de cima para baixo"
+      />
+    </div>
+  </div>
+</main>
   )
 }
