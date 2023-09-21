@@ -6,9 +6,9 @@ import firebase_app from "../firebase/config";
 
 const auth = getAuth(firebase_app);
 
-
-
-export const AuthContext = React.createContext<FirebaseUser  | null>(null);
+type User = FirebaseUser | null;
+export type ContextState = { user: User };
+export const AuthContext = React.createContext<ContextState  | undefined>(undefined);
 
 export const useAuthContext = () => React.useContext(AuthContext);
 
