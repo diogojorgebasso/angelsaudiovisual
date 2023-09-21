@@ -1,4 +1,6 @@
 import React from "react";
+import '@mantine/core/styles.css';
+
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { MantineProvider, ColorSchemeScript } from "@mantine/core";
