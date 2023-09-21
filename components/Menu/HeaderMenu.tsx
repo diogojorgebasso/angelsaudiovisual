@@ -108,7 +108,12 @@ export function HeaderMenu() {
  <Box pb={120}>
       <header className={classes.header}>
         <Group justify="space-between" h="100%">
-          <MantineLogo size={30} />
+         <Image
+            src={"/angels.png"}
+            width={50}
+            height={50}
+            alt="logo da Angels"
+          />  
 
           <Group h="100%" gap={0} visibleFrom="sm">
             <a href="#" className={classes.link}>
@@ -119,9 +124,9 @@ export function HeaderMenu() {
                 <a href="#" className={classes.link}>
                   <Center inline>
                     <Box component="span" mr={5}>
-                      Features
+                      Produtos
                     </Box>
-                    <IconChevronDown
+                    <FaRegArrowAltCircleDown
                       style={{ width: rem(16), height: rem(16) }}
                       color={theme.colors.blue[6]}
                     />
@@ -131,9 +136,9 @@ export function HeaderMenu() {
 
               <HoverCard.Dropdown style={{ overflow: 'hidden' }}>
                 <Group justify="space-between" px="md">
-                  <Text fw={500}>Features</Text>
+                  <Text fw={500}>Produtos</Text>
                   <Anchor href="#" fz="xs">
-                    View all
+                    Ver todos
                   </Anchor>
                 </Group>
 
@@ -147,28 +152,36 @@ export function HeaderMenu() {
                   <Group justify="space-between">
                     <div>
                       <Text fw={500} fz="sm">
-                        Get started
+                        Quero mais opções
                       </Text>
                       <Text size="xs" c="dimmed">
-                        Their food sources have decreased, and their numbers
+                        Se as opções acima não te atenderam...
                       </Text>
                     </div>
-                    <Button variant="default">Get started</Button>
+                    <Button variant="default">Mais opções</Button>
                   </Group>
                 </div>
               </HoverCard.Dropdown>
             </HoverCard>
-            <a href="#" className={classes.link}>
-              Learn
+            <a href="/clientes" className={classes.link}>
+              Nossos clientes
             </a>
-            <a href="#" className={classes.link}>
-              Academy
+            <a href="/sobre" className={classes.link}>
+              Sobre Nós
             </a>
           </Group>
 
           <Group visibleFrom="sm">
-            <Button variant="default">Log in</Button>
-            <Button>Sign up</Button>
+            {!user ? (
+              <>
+                <Button component="a"
+      href="/entrar" variant="default">Entrar</Button>
+                <Button component="a"
+      href="/cadastrar">Cadastrar</Button>
+              </>
+            ) : (
+              <ModalProfile />
+            )}
           </Group>
 
           <Burger opened={drawerOpened} onClick={toggleDrawer} hiddenFrom="sm" />
@@ -193,27 +206,35 @@ export function HeaderMenu() {
           <UnstyledButton className={classes.link} onClick={toggleLinks}>
             <Center inline>
               <Box component="span" mr={5}>
-                Features
+                Produtos
               </Box>
-              <IconChevronDown
+              <FaRegArrowAltCircleDown
                 style={{ width: rem(16), height: rem(16) }}
                 color={theme.colors.blue[6]}
               />
             </Center>
           </UnstyledButton>
           <Collapse in={linksOpened}>{links}</Collapse>
-          <a href="#" className={classes.link}>
-            Learn
+          <a href="/clientes" className={classes.link}>
+            Nossos Clientes
           </a>
-          <a href="#" className={classes.link}>
-            Academy
+          <a href="/sobre" className={classes.link}>
+            Sobre Nós
           </a>
 
           <Divider my="sm" />
 
           <Group justify="center" grow pb="xl" px="md">
-            <Button variant="default">Log in</Button>
-            <Button>Sign up</Button>
+            {user ? (
+              <>
+                <Button component="a"
+      href="/entrar" variant="default">Entrar</Button>
+                <Button component="a"
+      href="/cadastrar">Cadastrar</Button>
+              </>
+            ) : (
+              <ModalProfile />
+            )}
           </Group>
         </ScrollArea>
       </Drawer>

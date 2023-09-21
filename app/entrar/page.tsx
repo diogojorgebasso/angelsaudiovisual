@@ -1,34 +1,17 @@
 "use client";
 import React from "react";
-import signUp from "../../firebase/auth/signup";
+import signIn from "../../firebase/auth/signin";
 import { useRouter } from "next/navigation";
-import { TextInput, Button, Box, Code } from "@mantine/core";
-import { useForm } from "@mantine/form";
 
-export default function Page() {
+function Page() {
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
   const router = useRouter();
 
-  const form = useForm({
-    initialValues: {
-      name: "",
-      email: "",
-      password: "",
-    },
-
-    validate: {
-      name: (value) =>
-        value.length < 4 ? "Nomes tem que ter quatro letras" : null,
-      email: (value) => (/^\S+@\S+$/.test(value) ? null : "Email Inválido"),
-      password: (value) => (value.length < 8 ? "Mínimo de 8 caracteres" : null),
-    },
-  });
-
   const handleForm = async (event: React.FormEvent) => {
     event.preventDefault();
 
-    const { result, error } = await signUp(email, password);
+    const { result, error } = await signIn(email, password);
 
     if (error) {
       return console.log(error);
@@ -41,7 +24,7 @@ export default function Page() {
   return (
     <div className="wrapper">
       <div className="form-wrapper">
-        <h1 className="mt-60 mb-30">Sign up</h1>
+        <h1 className="mt-60 mb-30">Entrar</h1>
         <form onSubmit={handleForm} className="form">
           <label htmlFor="email">
             <p>Email</p>
@@ -54,7 +37,7 @@ export default function Page() {
               placeholder="example@mail.com"
             />
           </label>
-          <label htmlFor="senha">
+          <label htmlFor="password">
             <p>Senha</p>
             <input
               onChange={(e) => setPassword(e.target.value)}
@@ -62,12 +45,14 @@ export default function Page() {
               type="password"
               name="password"
               id="password"
-              placeholder="password"
+              placeholder="****"
             />
           </label>
-          <button type="submit">Se inscrever</button>
+          <button type="submit">Entrar</button>
         </form>
       </div>
     </div>
   );
 }
+
+export default Page;

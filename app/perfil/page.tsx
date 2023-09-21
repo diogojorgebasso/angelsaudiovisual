@@ -3,15 +3,19 @@ import React from "react";
 import { useAuthContext } from "../../context/AuthContext";
 import { useRouter } from "next/navigation";
 
-function Page() {
+export default function Page() {
   const { user } = useAuthContext();
   const router = useRouter();
 
   React.useEffect(() => {
+    console.log(user)
+    console.log(user.email);
     if (user == null) router.push("/");
   }, [router, user]);
 
-  return <h1>Only logged in users can view this page</h1>;
+  return (
+  <div>
+    <h1>Seu perfil</h1>
+  </div>
+);
 }
-
-export default Page;
