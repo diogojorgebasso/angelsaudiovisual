@@ -1,7 +1,9 @@
 'use client';
+
 import React from 'react';
 
 import { onAuthStateChanged, getAuth, User as FirebaseUser } from 'firebase/auth';
+import { Loader } from '@mantine/core';
 import firebase_app from '../firebase/config';
 
 const auth = getAuth(firebase_app);
@@ -23,6 +25,7 @@ export const AuthContextProvider = ({ children }: { children: React.ReactNode })
   const [loading, setLoading] = React.useState(true);
 
   React.useEffect(() => {
+    // eslint-disable-next-line @typescript-eslint/no-shadow
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
         setUser(user);
@@ -37,7 +40,7 @@ export const AuthContextProvider = ({ children }: { children: React.ReactNode })
 
   return (
     <AuthContext.Provider value={{ user }}>
-      {loading ? <div>Loading...</div> : children}
+      {loading ? <Loader color="blue" /> : children}
     </AuthContext.Provider>
   );
 };

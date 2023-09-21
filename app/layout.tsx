@@ -1,22 +1,23 @@
-import React from "react";
+import React from 'react';
 
 // UI
 import '@mantine/core/styles.css';
-import { MantineProvider, ColorSchemeScript } from "@mantine/core";
-import { theme } from "../theme";
-import { Inter } from "next/font/google";
-const inter = Inter({ subsets: ["latin"] });
+import { MantineProvider, ColorSchemeScript } from '@mantine/core';
+import { Inter } from 'next/font/google';
 
 //SEO
-import type { Metadata } from "next";
+import type { Metadata } from 'next';
+import { theme } from '../theme';
 
-import { HeaderMenu } from "../components/Menu/HeaderMenu";
-import { AuthContextProvider } from "../context/AuthContext";
+import { HeaderMenu } from '../components/Menu/HeaderMenu';
+import { AuthContextProvider } from '../context/AuthContext';
+
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: "Angels Audiovisual - Produtora de Eventos",
+  title: 'Angels Audiovisual - Produtora de Eventos',
   description:
-    "A Angels é uma produtora Audiovisual de eventos que atua no Sul De Minas, com foco em eventos Universitários e Empresariais.",
+    'A Angels é uma produtora Audiovisual de eventos que atua no Sul De Minas, com foco em eventos Universitários e Empresariais.',
 };
 
 export default function RootLayout({

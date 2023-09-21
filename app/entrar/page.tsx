@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { useRouter } from 'next/navigation';
-import signIn, {signInWithFacebook, signInWithGoogle} from '../../firebase/auth/signin';
+import signIn, { signInWithFacebook, signInWithGoogle } from '../../firebase/auth/signin';
 
 export default function Page() {
   const [email, setEmail] = React.useState('');
@@ -12,38 +12,30 @@ export default function Page() {
   const handleForm = async (event: React.FormEvent) => {
     event.preventDefault();
 
-    const { result, error } = await signIn(email, password);
+    const { error } = await signIn(email, password);
 
     if (error) {
       return console.log(error);
     }
 
-    // else successful
-    console.log(result);
     return router.push('/admin');
   };
 
-    const handleFacebook = async () => {
+  const handleFacebook = async () => {
     const { result, error } = await signInWithFacebook();
 
     if (error) {
       return console.log(error);
     }
-
-    // else successful
-    console.log(result);
     return router.push('/perfil');
   };
 
-    const handleGoogle = async () => {
+  const handleGoogle = async () => {
     const { result, error } = await signInWithGoogle();
 
     if (error) {
       return console.log(error);
     }
-
-    // else successful
-    console.log(result);
     return router.push('/perfil');
   };
 

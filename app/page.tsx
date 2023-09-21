@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -6,7 +6,7 @@ export default function Home() {
       <main>
         <h1 className="title">
           <Image
-            src={"/angels.png"}
+            src="/angels.png"
             alt="Angels Logo"
             width={300}
             height={300}

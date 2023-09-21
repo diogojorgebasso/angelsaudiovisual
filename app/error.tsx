@@ -49,12 +49,15 @@ export default function Error() {
             ta="center"
             className={classes.description}
           >
-            Page you are trying to open does not exist. You may have mistyped
-            the address, or the page has been moved to another URL. If you think
-            this is an error contact support.
+            Uma foto de má qualidade pode arruinar seu evento, assim como essa página.
           </Text>
           <Group justify="center">
-            <Button size="md">Take me back to home page</Button>
+            <Button
+              component="a"
+              href="/produtos"
+              size="md"
+            >Quero ver o que vocês podem oferecer pra mim :)
+            </Button>
           </Group>
           I
         </div>

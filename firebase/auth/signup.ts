@@ -1,13 +1,14 @@
-import { createUserWithEmailAndPassword, getAuth, FacebookAuthProvider, signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
+import { sendSignInLinkToEmail, getAuth, FacebookAuthProvider, signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
 import firebaseApp from '../config';
 
 const auth = getAuth(firebaseApp);
 
-export default async function signUp(email: string, password: string) {
+export default async function signUp(email: string,) {
   let result = null;
   let error = null;
   try {
-    result = await createUserWithEmailAndPassword(auth, email, password);
+    result = await sendSignInLinkToEmail(auth, email, { url: 'http://angelsaudiovisual.com/cadastrar', handleCodeInApp: true });
+    await localStorage.setItem('emailForSignIn', email);
   } catch (e) {
     error = e;
   }
@@ -17,7 +18,7 @@ export default async function signUp(email: string, password: string) {
 
 export async function signUpWithFacebook() {
   let result = null;
-    let error = null;
+  let error = null;
   try {
     const provider = new FacebookAuthProvider();
     result = await signInWithPopup(auth, provider);
@@ -30,7 +31,7 @@ export async function signUpWithFacebook() {
 
 export async function signUpWithGoogle() {
   let result = null;
-    let error = null;
+  let error = null;
   try {
     const provider = new GoogleAuthProvider();
     result = await signInWithPopup(auth, provider);

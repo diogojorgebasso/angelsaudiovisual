@@ -1,7 +1,7 @@
-import firebase_app from "../config";
-import { getFirestore, doc, setDoc } from "firebase/firestore";
+import { getFirestore, doc, setDoc } from 'firebase/firestore';
+import firebase_app from '../config';
 
-const db = getFirestore(firebase_app)
+const db = getFirestore(firebase_app);
 export default async function addData(colllection: string, id: string, data: any) {
     let result = null;
     let error = null;
