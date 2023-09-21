@@ -1,16 +1,8 @@
-"use client";
-import React, { useState } from "react";
+'use client';
 
-import {
-  Container,
-  Avatar,
-  Menu,
-  Group,
-  Burger,
-  UnstyledButton,
-  Text,
-  rem,
-} from "@mantine/core";
+import React, { useState } from 'react';
+
+import { Container, Avatar, Menu, Group, Burger, UnstyledButton, Text, rem } from '@mantine/core';
 
 //icons
 import {
@@ -22,15 +14,15 @@ import {
   FaSyncAlt,
   FaPeopleArrows,
   FaSignInAlt,
-} from "react-icons/fa";
+} from 'react-icons/fa';
 
-import { useDisclosure } from "@mantine/hooks";
-import cx from "clsx";
+import { useDisclosure } from '@mantine/hooks';
+import cx from 'clsx';
 
-import { useAuthContext } from "../../context/AuthContext";
+import { useAuthContext } from '../../context/AuthContext';
 
 //css
-import classes from "./ModalProfile.module.css";
+import classes from './ModalProfile.module.css';
 
 export default function ModalProfile() {
   const [opened, { toggle }] = useDisclosure(false);
@@ -45,7 +37,7 @@ export default function ModalProfile() {
         <Menu
           width={260}
           position="bottom-end"
-          transitionProps={{ transition: "pop-top-right" }}
+          transitionProps={{ transition: 'pop-top-right' }}
           onClose={() => setUserMenuOpened(false)}
           onOpen={() => setUserMenuOpened(true)}
           withinPortal
@@ -58,97 +50,49 @@ export default function ModalProfile() {
             >
               <Group gap={7}>
                 <Avatar
-                  src={user?.image}
-                  alt={user?.name}
+                  src={user?.photoURL}
+                  alt={user?.displayName || 'Usuário'}
                   radius="xl"
                   size={20}
                 />
                 <Text fw={500} size="sm" lh={1} mr={3}>
-                  {user?.name}
+                  {user?.displayName}
                 </Text>
-                <FaRegArrowAltCircleDown
-                  style={{ width: rem(12), height: rem(12) }}
-                />
+                <FaRegArrowAltCircleDown style={{ width: rem(12), height: rem(12) }} />
               </Group>
             </UnstyledButton>
           </Menu.Target>
           <Menu.Dropdown>
-            <Menu.Item
-              leftSection={
-                <FaHeart
-                  style={{ width: rem(16), height: rem(16) }}
-                />
-              }
-            >
+            <Menu.Item leftSection={<FaHeart style={{ width: rem(16), height: rem(16) }} />}>
               Propostas curtidas
             </Menu.Item>
-            <Menu.Item
-              leftSection={
-                <FaBookmark
-                  style={{ width: rem(16), height: rem(16) }}
-                />
-              }
-            >
+            <Menu.Item leftSection={<FaBookmark style={{ width: rem(16), height: rem(16) }} />}>
               Propostas salvas
             </Menu.Item>
-            <Menu.Item
-              leftSection={
-                <FaCommentDots
-                  style={{ width: rem(16), height: rem(16) }}
-                />
-              }
-            >
+            <Menu.Item leftSection={<FaCommentDots style={{ width: rem(16), height: rem(16) }} />}>
               Seus comentários
             </Menu.Item>
 
             <Menu.Label>Configurações</Menu.Label>
-            <Menu.Item
-              leftSection={
-                <FaSyncAlt
-                  style={{ width: rem(16), height: rem(16) }}
-                />
-              }
-            >
+            <Menu.Item leftSection={<FaSyncAlt style={{ width: rem(16), height: rem(16) }} />}>
               Atualizar dados
             </Menu.Item>
-            <Menu.Item
-              leftSection={
-                <FaPeopleArrows
-                  style={{ width: rem(16), height: rem(16) }}
-                />
-              }
-            >
+            <Menu.Item leftSection={<FaPeopleArrows style={{ width: rem(16), height: rem(16) }} />}>
               Trocar conta
             </Menu.Item>
-            <Menu.Item
-              leftSection={
-                <FaSignInAlt
-                  style={{ width: rem(16), height: rem(16) }}
-                />
-              }
-            >
+            <Menu.Item leftSection={<FaSignInAlt style={{ width: rem(16), height: rem(16) }} />}>
               Sair
             </Menu.Item>
 
             <Menu.Divider />
 
             <Menu.Label>Área Perigosa</Menu.Label>
-            <Menu.Item
-              leftSection={
-                <FaSyncAlt
-                  style={{ width: rem(16), height: rem(16) }}
-                />
-              }
-            >
+            <Menu.Item leftSection={<FaSyncAlt style={{ width: rem(16), height: rem(16) }} />}>
               Alterar dados
             </Menu.Item>
             <Menu.Item
               color="red"
-              leftSection={
-                <FaTrashAlt
-                  style={{ width: rem(16), height: rem(16) }}
-                />
-              }
+              leftSection={<FaTrashAlt style={{ width: rem(16), height: rem(16) }} />}
             >
               Deletar conta
             </Menu.Item>
