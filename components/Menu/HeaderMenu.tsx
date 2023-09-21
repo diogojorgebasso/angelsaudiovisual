@@ -16,47 +16,62 @@ import {
   ScrollArea,
   rem,
   useMantineTheme,
-} from '@mantine/core';
-import Image from 'next/image';
-import { useDisclosure } from '@mantine/hooks';
-import { FaTv, FaCameraRetro, FaCamera, FaFilm, FaCubes, FaPlane, FaRegArrowAltCircleDown } from "react-icons/fa";
-import classes from './HeaderMegaMenu.module.css';
+} from "@mantine/core";
+import Image from "next/image";
+import { useDisclosure } from "@mantine/hooks";
+import {
+  FaTv,
+  FaCameraRetro,
+  FaCamera,
+  FaFilm,
+  FaCubes,
+  FaPlane,
+  FaRegArrowAltCircleDown,
+} from "react-icons/fa";
+import classes from "./HeaderMenu.module.css";
+import ModalProfile from "./ModalProfile";
+import { useAuthContext } from "../../src/context/AuthContext";
 
 const mockdata = [
   {
     icon: FaCubes,
-    title: 'Foto + Vídeo',
-    description: 'Faremos a Captação de Imagens e Vídeos do seu evento.',
+    title: "Foto + Vídeo",
+    description: "Faremos a Captação de Imagens e Vídeos do seu evento.",
   },
   {
     icon: FaCamera,
-    title: 'Fotografia',
-    description: 'Uma imagem vale mais que mil palavras, e nós sabemos disso.',
+    title: "Fotografia",
+    description: "Uma imagem vale mais que mil palavras, e nós sabemos disso.",
   },
   {
     icon: FaPlane,
-    title: 'Serviços Aéreos',
-    description: 'Captamos imagens aéreas com drones de última geração.',
+    title: "Serviços Aéreos",
+    description: "Captamos imagens aéreas com drones de última geração.",
   },
   {
     icon: FaTv,
-    title: 'Edição de Vídeo',
-    description: 'Tenho um material bruto e preciso de uma edição profissional.',
+    title: "Edição de Vídeo",
+    description:
+      "Tenho um material bruto e preciso de uma edição profissional.",
   },
   {
     icon: FaCameraRetro,
-    title: 'Edição de Imagem',
-    description: 'Lembra daquela viagem? Vamos deixar suas fotos ainda mais bonitas.',
+    title: "Edição de Imagem",
+    description:
+      "Lembra daquela viagem? Vamos deixar suas fotos ainda mais bonitas.",
   },
   {
     icon: FaFilm,
-    title: 'Edição para Redes Sociais',
-    description: 'As redes sociais são o futuro do marketing, e nós sabemos disso. Pílulas de conteúdo para o seu público.',
+    title: "Edição para Redes Sociais",
+    description:
+      "As redes sociais são o futuro do marketing, e nós sabemos disso. Pílulas de conteúdo para o seu público.",
   },
 ];
 
 export function HeaderMegaMenu() {
-  const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
+  const { user } = useAuthContext();
+  const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] =
+    useDisclosure(false);
   const [linksOpened, { toggle: toggleLinks }] = useDisclosure(false);
   const theme = useMantineTheme();
 
@@ -64,7 +79,10 @@ export function HeaderMegaMenu() {
     <UnstyledButton className={classes.subLink} key={item.title}>
       <Group wrap="nowrap" align="flex-start">
         <ThemeIcon size={34} variant="default" radius="md">
-          <item.icon style={{ width: rem(22), height: rem(22) }} color={theme.colors.blue[6]} />
+          <item.icon
+            style={{ width: rem(22), height: rem(22) }}
+            color={theme.colors.blue[6]}
+          />
         </ThemeIcon>
         <div>
           <Text size="sm" fw={500}>
@@ -82,15 +100,19 @@ export function HeaderMegaMenu() {
     <Box pb={120}>
       <header className={classes.header}>
         <Group justify="space-between" h="100%">
-          <Image 
-          src={"./angels.png"}
-          alt='logo da Angels' />
+          <Image src={"./angels.png"} alt="logo da Angels" />
 
           <Group h="100%" gap={0} visibleFrom="sm">
             <a href="#" className={classes.link}>
               Home
             </a>
-            <HoverCard width={600} position="bottom" radius="md" shadow="md" withinPortal>
+            <HoverCard
+              width={600}
+              position="bottom"
+              radius="md"
+              shadow="md"
+              withinPortal
+            >
               <HoverCard.Target>
                 <a href="#" className={classes.link}>
                   <Center inline>
@@ -105,7 +127,7 @@ export function HeaderMegaMenu() {
                 </a>
               </HoverCard.Target>
 
-              <HoverCard.Dropdown style={{ overflow: 'hidden' }}>
+              <HoverCard.Dropdown style={{ overflow: "hidden" }}>
                 <Group justify="space-between" px="md">
                   <Text fw={500}>Produtos</Text>
                   <Anchor href="/produtos" fz="xs">
@@ -123,15 +145,16 @@ export function HeaderMegaMenu() {
                   <Group justify="space-between">
                     <div>
                       <Text fw={500} fz="sm">
-                      Quero mais opções
+                        Quero mais opções
                       </Text>
                       <Text size="xs" c="dimmed">
-                        Se as opções acima não te atenderam, clique no botão ao lado e veja mais opções.
+                        Se as opções acima não te atenderam, clique no botão ao
+                        lado e veja mais opções.
                       </Text>
                     </div>
-                    <Button component="a"
-                      href="/produtos"
-                      variant="default">Mais Opções</Button>
+                    <Button component="a" href="/produtos" variant="default">
+                      Mais Opções
+                    </Button>
                   </Group>
                 </div>
               </HoverCard.Dropdown>
@@ -145,14 +168,21 @@ export function HeaderMegaMenu() {
           </Group>
 
           <Group visibleFrom="sm">
-            { isUser ? <>
-            <Button variant="default">Entrar</Button>
-            <Button>Cadastro</Button>
-</> :
-
+            {user ? (
+              <>
+                <Button variant="default">Entrar</Button>
+                <Button>Cadastro</Button>
+              </>
+            ) : (
+              <ModalProfile />
+            )}
           </Group>
 
-          <Burger opened={drawerOpened} onClick={toggleDrawer} hiddenFrom="sm" />
+          <Burger
+            opened={drawerOpened}
+            onClick={toggleDrawer}
+            hiddenFrom="sm"
+          />
         </Group>
       </header>
 
@@ -201,17 +231,3 @@ export function HeaderMegaMenu() {
     </Box>
   );
 }
-
-
-
-import cx from 'clsx';
-import { useState } from 'react';
-
-import classes from './HeaderTabs.module.css';
-
-const user = {
-  name: 'Jane Spoonfighter',
-  email: 'janspoon@fighter.dev',
-  image:
-    'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=255&q=80',
-};

@@ -1,3 +1,3 @@
 export default function Page() {
-  return <h1>Hello, Página de Serviços!</h1>
+  return <h1>Hello, Página de Serviços!</h1>;
 }
