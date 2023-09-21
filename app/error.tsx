@@ -1,12 +1,10 @@
-"use client"; // Error components must be Client Components
+'use client';
 
-// imagem desfocada no fundo e à medida que o usuário move o mouse em direção ao botão de produtos, a imagem se torna mais nítida. O texto vai trocando também.
-
-import { Container, Title, Text, Button, Group } from "@mantine/core";
-import { Illustration } from "../components/Error/Illustration";
-import classes from "../components/Error/NothingFoundBackgroung.module.css";
-import Image from "next/image";
-import { useEffect, useState } from "react";
+import { Container, Title, Text, Button, Group } from '@mantine/core';
+import Image from 'next/image';
+import { useEffect, useState } from 'react';
+import { Illustration } from '../components/Error/Illustration';
+import classes from '../components/Error/NothingFoundBackgroung.module.css';
 
 export default function Error() {
   const [scrollY, setScrollY] = useState(0);
@@ -24,9 +22,9 @@ export default function Error() {
     // related: https://stackoverflow.com/a/63408216
     handleScroll();
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
   return (
@@ -34,8 +32,11 @@ export default function Error() {
       <div className={classes.inner}>
         <Illustration className={classes.image} />
         <Image
-          src={"./backgroundErrorImage.webp"}
+          className={classes.image}
+          src="/backgroundErrorImage.webp"
           alt="Imagem de fundo desfocada"
+          height={500}
+          width={500}
           quality={100}
         />
         <div className={classes.content}>

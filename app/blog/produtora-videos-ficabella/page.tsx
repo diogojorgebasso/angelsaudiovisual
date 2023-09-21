@@ -1,9 +1,9 @@
 /*eslint keyword-spacing: ["error", { "before": true }]*/
 
-import React from "react";
+import React from 'react';
 
 export default function Page() {
-  return ( 
+  return (
   <main>
       <h1>A produtora de vídeos FicaBella tem enfrentado uma significativa</h1>
       <p>
@@ -14,7 +14,7 @@ export default function Page() {
         desligamento e concluiu que essa rotatividade era uma manifestação de
         descontentamento devido a impossibilidade de ascensão na empresa. So há
         possibilidade de ascensão se o assistente for promovido à gerente.
-        </p>
+      </p>
       <br />
       <p>
         De acordo com as informações do texto, a rotatividade de colaboradores
@@ -22,6 +22,6 @@ export default function Page() {
       </p>
 
       <p>Resolução é a alternativa E.</p>
-    </main>
+  </main>
   );
 }

@@ -1,8 +1,8 @@
 'use client';
 
 import React from 'react';
-import signIn from '../../firebase/auth/signin';
 import { useRouter } from 'next/navigation';
+import signIn, {signInWithFacebook, signInWithGoogle} from '../../firebase/auth/signin';
 
 export default function Page() {
   const [email, setEmail] = React.useState('');
@@ -22,6 +22,31 @@ export default function Page() {
     console.log(result);
     return router.push('/admin');
   };
+
+    const handleFacebook = async () => {
+    const { result, error } = await signInWithFacebook();
+
+    if (error) {
+      return console.log(error);
+    }
+
+    // else successful
+    console.log(result);
+    return router.push('/perfil');
+  };
+
+    const handleGoogle = async () => {
+    const { result, error } = await signInWithGoogle();
+
+    if (error) {
+      return console.log(error);
+    }
+
+    // else successful
+    console.log(result);
+    return router.push('/perfil');
+  };
+
   return (
     <div className="wrapper">
       <div className="form-wrapper">

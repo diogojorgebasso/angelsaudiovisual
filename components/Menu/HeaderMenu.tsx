@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import {
   HoverCard,
@@ -18,11 +18,13 @@ import {
   ScrollArea,
   rem,
   useMantineTheme,
-} from "@mantine/core";
+  Switch,
+  Indicator,
+} from '@mantine/core';
 
-import Image from "next/image";
+import Image from 'next/image';
 
-import { useDisclosure } from "@mantine/hooks";
+import { useDisclosure } from '@mantine/hooks';
 
 import {
   FaTv,
@@ -32,47 +34,50 @@ import {
   FaCubes,
   FaPlane,
   FaRegArrowAltCircleDown,
-} from "react-icons/fa";
+  FaRegMoon,
+  FaRegSun,
+  FaRegEnvelopeOpen,
+} from 'react-icons/fa';
 
-import classes from "./HeaderMenu.module.css";
+import classes from './HeaderMenu.module.css';
 
-import ModalProfile from "./ModalProfile";
+import ModalProfile from './ModalProfile';
 
-import { useAuthContext } from "../../context/AuthContext";
+import { useAuthContext } from '../../context/AuthContext';
 
 const mockdata = [
   {
     icon: FaCubes,
-    title: "Foto + Vídeo",
-    description: "Faremos a Captação de Imagens e Vídeos do seu evento.",
+    title: 'Foto + Vídeo',
+    description: 'Faremos a Captação de Imagens e Vídeos do seu evento.',
   },
   {
     icon: FaCamera,
-    title: "Fotografia",
-    description: "Uma imagem vale mais que mil palavras, e nós sabemos disso.",
+    title: 'Fotografia',
+    description: 'Uma imagem vale mais que mil palavras, e nós sabemos disso.',
   },
   {
     icon: FaPlane,
-    title: "Serviços Aéreos",
-    description: "Captamos imagens aéreas com drones de última geração.",
+    title: 'Serviços Aéreos',
+    description: 'Captamos imagens aéreas com drones de última geração.',
   },
   {
     icon: FaTv,
-    title: "Edição de Vídeo",
+    title: 'Edição de Vídeo',
     description:
-      "Tenho um material bruto e preciso de uma edição profissional.",
+      'Tenho um material bruto e preciso de uma edição profissional.',
   },
   {
     icon: FaCameraRetro,
-    title: "Edição de Imagem",
+    title: 'Edição de Imagem',
     description:
-      "Lembra daquela viagem? Vamos deixar suas fotos ainda mais bonitas.",
+      'Lembra daquela viagem? Vamos deixar suas fotos ainda mais bonitas.',
   },
   {
     icon: FaFilm,
-    title: "Edição para Redes Sociais",
+    title: 'Edição para Redes Sociais',
     description:
-      "As redes sociais são o futuro do marketing, e nós sabemos disso. Pílulas de conteúdo para o seu público.",
+      'As redes sociais são o futuro do marketing, e nós sabemos disso. Pílulas de conteúdo para o seu público.',
   },
 ];
 
@@ -104,16 +109,30 @@ export function HeaderMenu() {
     </UnstyledButton>
   ));
 
+  const sunIcon = (
+    <FaRegSun
+      style={{ width: rem(16), height: rem(16) }}
+      color={theme.colors.yellow[4]}
+    />
+  );
+
+  const moonIcon = (
+    <FaRegMoon
+      style={{ width: rem(16), height: rem(16) }}
+      color={theme.colors.blue[6]}
+    />
+  );
+
   return (
- <Box pb={120}>
+    <Box pb={120}>
       <header className={classes.header}>
         <Group justify="space-between" h="100%">
-         <Image
-            src={"/angels.png"}
+          <Image
+            src="/angels.png"
             width={50}
             height={50}
             alt="logo da Angels"
-          />  
+          />
 
           <Group h="100%" gap={0} visibleFrom="sm">
             <a href="#" className={classes.link}>
@@ -174,10 +193,17 @@ export function HeaderMenu() {
           <Group visibleFrom="sm">
             {!user ? (
               <>
-                <Button component="a"
-      href="/entrar" variant="default">Entrar</Button>
-                <Button component="a"
-      href="/cadastrar">Cadastrar</Button>
+                <Button
+                  component="a"
+                  href="/entrar"
+                  variant="default"
+                >Entrar
+                </Button>
+                <Button
+                  component="a"
+                  href="/cadastrar"
+                >Cadastrar
+                </Button>
               </>
             ) : (
               <ModalProfile />
@@ -223,14 +249,24 @@ export function HeaderMenu() {
           </a>
 
           <Divider my="sm" />
-
+          <Indicator inline processing size={12}>
+            <FaRegEnvelopeOpen />
+          </Indicator>
+          <Switch size="md" color="dark.4" onLabel={sunIcon} offLabel={moonIcon} />
           <Group justify="center" grow pb="xl" px="md">
             {user ? (
               <>
-                <Button component="a"
-      href="/entrar" variant="default">Entrar</Button>
-                <Button component="a"
-      href="/cadastrar">Cadastrar</Button>
+                <Button
+                  component="a"
+                  href="/entrar"
+                  variant="default"
+                >Entrar
+                </Button>
+                <Button
+                  component="a"
+                  href="/cadastrar"
+                >Cadastrar
+                </Button>
               </>
             ) : (
               <ModalProfile />
