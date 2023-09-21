@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { MantineProvider, ColorSchemeScript } from "@mantine/core";
 const inter = Inter({ subsets: ["latin"] });
-import { HeaderMegaMenu } from "../../components/Menu/HeaderMenu";
+import { HeaderMenu } from "../../components/Menu/HeaderMenu";
 import { AuthContextProvider } from "../context/AuthContext";
 import { theme } from "../../theme";
 
@@ -30,7 +30,10 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <MantineProvider theme={theme}>
-          <AuthContextProvider>{children}</AuthContextProvider>
+          <AuthContextProvider>
+            <HeaderMenu />
+            {children}
+          </AuthContextProvider>
         </MantineProvider>
       </body>
     </html>

@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 
 import {
@@ -25,6 +26,8 @@ import {
 
 import { useDisclosure } from "@mantine/hooks";
 import cx from "clsx";
+
+import { useAuthContext } from "../../src/context/AuthContext";
 
 //css
 import classes from "./ModalProfile.module.css";
@@ -55,13 +58,13 @@ export default function ModalProfile() {
             >
               <Group gap={7}>
                 <Avatar
-                  src={user.image}
-                  alt={user.name}
+                  src={user?.image}
+                  alt={user?.name}
                   radius="xl"
                   size={20}
                 />
                 <Text fw={500} size="sm" lh={1} mr={3}>
-                  {user.name}
+                  {user?.name}
                 </Text>
                 <FaRegArrowAltCircleDown
                   style={{ width: rem(12), height: rem(12) }}

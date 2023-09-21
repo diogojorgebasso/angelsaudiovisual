@@ -1,3 +1,4 @@
+"use client";
 import {
   HoverCard,
   Group,
@@ -30,6 +31,7 @@ import {
 } from "react-icons/fa";
 import classes from "./HeaderMenu.module.css";
 import ModalProfile from "./ModalProfile";
+
 import { useAuthContext } from "../../src/context/AuthContext";
 
 const mockdata = [
@@ -68,7 +70,7 @@ const mockdata = [
   },
 ];
 
-export function HeaderMegaMenu() {
+export function HeaderMenu() {
   const { user } = useAuthContext();
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] =
     useDisclosure(false);
@@ -100,7 +102,12 @@ export function HeaderMegaMenu() {
     <Box pb={120}>
       <header className={classes.header}>
         <Group justify="space-between" h="100%">
-          <Image src={"./angels.png"} alt="logo da Angels" />
+          <Image
+            src={"/angels.png"}
+            width={500}
+            height={500}
+            alt="logo da Angels"
+          />
 
           <Group h="100%" gap={0} visibleFrom="sm">
             <a href="#" className={classes.link}>
