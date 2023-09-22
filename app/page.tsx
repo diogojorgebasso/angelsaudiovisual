@@ -59,6 +59,7 @@ export default function Home() {
           aspectWidth={16}
           id="KzY1_tHNzsg"
           title="Vídeo de Apresentação da Angels Audiovisual"
+          noCookie
         />
       </div>
     </Container>
