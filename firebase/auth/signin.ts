@@ -1,8 +1,8 @@
 import { signInWithEmailLink, getAuth, signInWithPopup, FacebookAuthProvider, GoogleAuthProvider } from 'firebase/auth';
-import firebase_app from '../config';
+import firebaseApp from '../config';
 import getData from '../firestore/getData';
 
-const auth = getAuth(firebase_app);
+const auth = getAuth(firebaseApp);
 
 export default async function signIn(email: string) {
   let error = null;
