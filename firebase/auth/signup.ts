@@ -1,43 +1,27 @@
 import { sendSignInLinkToEmail, getAuth, FacebookAuthProvider, signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
 import firebaseApp from '../config';
+import addData from '../firestore/addData';
 
 const auth = getAuth(firebaseApp);
 
-export default async function signUp(email: string,) {
-  let result = null;
-  let error = null;
+export default async function signUp(email: string, name: string) {
   try {
-    result = await sendSignInLinkToEmail(auth, email, { url: 'http://angelsaudiovisual.com/cadastrar', handleCodeInApp: true });
-    await localStorage.setItem('emailForSignIn', email);
-  } catch (e) {
-    error = e;
+    const response: any = await sendSignInLinkToEmail(auth, email, { url: 'http://angelsaudiovisual.com/cadastrar', handleCodeInApp: true });
+    return await addData('users', response.user.uid, { name, email });
+  } catch (error) {
+    return ({ error });
   }
-
-  return { result, error };
 }
 
 export async function signUpWithFacebook() {
-  let result = null;
-  let error = null;
-  try {
-    const provider = new FacebookAuthProvider();
-    result = await signInWithPopup(auth, provider);
-  } catch (e) {
-    error = e;
-  }
-
-  return { result, error };
+  const provider = new FacebookAuthProvider();
+  return signInWithPopup(auth, provider)
+    .then((result) => { addData('clientes', result.user.uid, { name: result.user.displayName, email: result.user.email }); })
+    .catch((error) => ({ error }));
 }
 
 export async function signUpWithGoogle() {
-  let result = null;
-  let error = null;
-  try {
-    const provider = new GoogleAuthProvider();
-    result = await signInWithPopup(auth, provider);
-  } catch (e) {
-    error = e;
-  }
-
-  return { result, error };
+  return signInWithPopup(auth, new GoogleAuthProvider())
+    .then((result) => { addData('clientes', result.user.uid, { name: result.user.displayName, email: result.user.email }); })
+    .catch((error) => ({ error }));
 }

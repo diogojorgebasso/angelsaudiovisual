@@ -16,44 +16,26 @@ import { FaFacebook, FaGoogle } from 'react-icons/fa';
 import signUp, { signUpWithFacebook, signUpWithGoogle } from '../../firebase/auth/signup';
 
 export default function Page() {
-  const [email, setEmail] = React.useState('');
-  const [nome, setNome] = React.useState('');
-
   const router = useRouter();
 
   const handleFacebook = async () => {
-    const { result, error } = await signUpWithFacebook();
-
-    if (error) {
-      return console.log(error);
-    }
-
-    // else successful
-    console.log(result);
+    await signUpWithFacebook();
     return router.push('/perfil');
   };
 
   const handleGoogle = async () => {
-    const { result, error } = await signUpWithGoogle();
-
-    if (error) {
-      return console.log(error);
-    }
-
-    // else successful
-    console.log(result);
+    await signUpWithGoogle();
     return router.push('/perfil');
   };
 
-  const handleForm = async (event: React.FormEvent) => {
+  const handleForm = async (event: React.SyntheticEvent) => {
     event.preventDefault();
+    const target = event.target as typeof event.target & {
+      email: { value: string },
+      nome: { value: string }
+    };
 
-    const { error } = await signUp(email);
-
-    if (error) {
-      return console.log(error);
-    }
-
+    await signUp(target.email.value, target.nome.value);
     return router.push('/perfil');
   };
 
@@ -71,10 +53,16 @@ export default function Page() {
         <TextInput
           label="Seu Nome"
           placeholder="Diogo Jorge Basso"
+          required
+          name="nome"
+          type="text"
         />
         <TextInput
           label="Seu email"
           placeholder="nome@email.com.br"
+          type="email"
+          name="email"
+          required
         />
         <button type="submit">Se inscrever</button>
         <Switch

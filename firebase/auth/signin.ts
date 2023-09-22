@@ -1,42 +1,30 @@
-import { signInWithEmailAndPassword, getAuth, signInWithPopup, FacebookAuthProvider, GoogleAuthProvider } from 'firebase/auth';
+import { signInWithEmailLink, getAuth, signInWithPopup, FacebookAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 import firebase_app from '../config';
+import getData from '../firestore/getData';
 
 const auth = getAuth(firebase_app);
 
-export default async function signIn(email: string, password: string) {
+export default async function signIn(email: string) {
+  let error = null;
   let result = null;
-    let error = null;
   try {
-    result = await signInWithEmailAndPassword(auth, email, password);
-  } catch (e) {
-    error = e;
+    const response: any = await signInWithEmailLink(auth, email, 'http://angelsaudiovisual.com/cadastrar');
+    result = await getData('users', response.user.uid);
+  } catch (errorInRequest) {
+    error = ({ error });
   }
-
   return { result, error };
 }
 
 export async function signInWithFacebook() {
-  let result = null;
-    let error = null;
-  try {
-    const provider = new FacebookAuthProvider();
-    result = await signInWithPopup(auth, provider);
-  } catch (e) {
-    error = e;
-  }
-
-  return { result, error };
+  const provider = new FacebookAuthProvider();
+  return signInWithPopup(auth, provider)
+    .then((result) => { getData('clientes', result.user.uid); })
+    .catch((error) => ({ error }));
 }
 
 export async function signInWithGoogle() {
-  let result = null;
-    let error = null;
-  try {
-    const provider = new GoogleAuthProvider();
-    result = await signInWithPopup(auth, provider);
-  } catch (e) {
-    error = e;
-  }
-
-  return { result, error };
+  return signInWithPopup(auth, new GoogleAuthProvider())
+    .then((result) => { getData('clientes', result.user.uid); })
+    .catch((error) => ({ error }));
 }

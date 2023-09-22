@@ -14,7 +14,9 @@ export default function Error() {
     const handleScroll = () => {
       setScrollY(window.scrollY);
       setScrollX(window.scrollX);
+      // eslint-disable-next-line no-console
       console.log(scrollY);
+      // eslint-disable-next-line no-console
       console.log(scrollX);
     };
 

@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { useRouter } from 'next/navigation';
+import { Button } from '@mantine/core';
 import { useAuthContext } from '../../context/AuthContext';
 
 export default function Page() {
@@ -16,6 +17,8 @@ export default function Page() {
     <div>
       <h1>Seu perfil</h1>
       <p>{user?.email}</p>
+      <Button onClick={() => router.push('/produtos')}>Ver produtos</Button>
+      <Button onClick={() => logOut()}>Sair</Button>
     </div>
   );
 }
