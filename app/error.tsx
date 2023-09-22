@@ -15,6 +15,7 @@ export default function Error() {
       setScrollY(window.scrollY);
       setScrollX(window.scrollX);
       console.log(scrollY);
+      console.log(scrollX);
     };
 
     // just trigger this so that the initial state
