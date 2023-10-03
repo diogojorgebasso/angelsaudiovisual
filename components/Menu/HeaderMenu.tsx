@@ -23,6 +23,7 @@ import {
 } from '@mantine/core';
 
 import Image from 'next/image';
+import Link from 'next/link';
 
 import { useDisclosure } from '@mantine/hooks';
 
@@ -49,35 +50,41 @@ const mockdata = [
   {
     icon: FaCubes,
     title: 'Foto + Vídeo',
-    description: 'Faremos a Captação de Imagens e Vídeos do seu evento.',
+    description: 'Fazemos a Captação de Imagens e Vídeos do seu evento.',
+    destination: '/produtos/foto-video',
   },
   {
     icon: FaCamera,
     title: 'Fotografia',
     description: 'Uma imagem vale mais que mil palavras, e nós sabemos disso.',
+    destination: '/produtos/fotografia',
   },
   {
     icon: FaPlane,
     title: 'Serviços Aéreos',
-    description: 'Captamos imagens aéreas com drones de última geração.',
+    description: 'Visão superiora do seu evento.',
+    destination: '/produtos/servicos-aereos',
   },
   {
     icon: FaTv,
     title: 'Edição de Vídeo',
     description:
-      'Tenho um material bruto e preciso de uma edição profissional.',
+      'Tem um material bruto e precisa de uma edição profissional?',
+    destination: '/produtos/edicao-de-video',
   },
   {
     icon: FaCameraRetro,
     title: 'Edição de Imagem',
     description:
-      'Lembra daquela viagem? Vamos deixar suas fotos ainda mais bonitas.',
+      'Lembra daquela viagem? Vamos deixar suas fotos ainda mais marcantes.',
+    destination: '/produtos/edicao-de-imagem',
   },
   {
     icon: FaFilm,
     title: 'Edição para Redes Sociais',
     description:
-      'As redes sociais são o futuro do marketing, e nós sabemos disso. Pílulas de conteúdo para o seu público.',
+      'Pílulas de conteúdo para o seu público.',
+    destination: '/produtos/editor-redes-sociais',
   },
 ];
 
@@ -91,20 +98,22 @@ export function HeaderMenu() {
   const links = mockdata.map((item) => (
     <UnstyledButton className={classes.subLink} key={item.title}>
       <Group wrap="nowrap" align="flex-start">
-        <ThemeIcon size={34} variant="default" radius="md">
-          <item.icon
-            style={{ width: rem(22), height: rem(22) }}
-            color={theme.colors.blue[6]}
-          />
-        </ThemeIcon>
-        <div>
-          <Text size="sm" fw={500}>
-            {item.title}
-          </Text>
-          <Text size="xs" c="dimmed">
-            {item.description}
-          </Text>
-        </div>
+        <a href={item.destination} className={classes.link}>
+          <ThemeIcon size={34} variant="default" radius="md">
+            <item.icon
+              style={{ width: rem(22), height: rem(22) }}
+              color={theme.colors.blue[6]}
+            />
+          </ThemeIcon>
+          <div>
+            <Text size="sm" fw={500}>
+              {item.title}
+            </Text>
+            <Text size="xs" c="dimmed">
+              {item.description}
+            </Text>
+          </div>
+        </a>
       </Group>
     </UnstyledButton>
   ));
@@ -135,12 +144,12 @@ export function HeaderMenu() {
           />
 
           <Group h="100%" gap={0} visibleFrom="sm">
-            <a href="#" className={classes.link}>
+            <a href="/" className={classes.link}>  {/* Trocar Home por outra página ou tirar daí */}
               Home
             </a>
             <HoverCard width={600} position="bottom" radius="md" shadow="md" withinPortal>
               <HoverCard.Target>
-                <a href="#" className={classes.link}>
+                <a href="/produtos" className={classes.link}>
                   <Center inline>
                     <Box component="span" mr={5}>
                       Produtos
@@ -156,7 +165,7 @@ export function HeaderMenu() {
               <HoverCard.Dropdown style={{ overflow: 'hidden' }}>
                 <Group justify="space-between" px="md">
                   <Text fw={500}>Produtos</Text>
-                  <Anchor href="#" fz="xs">
+                  <Anchor href="/produtos" fz="xs">
                     Ver todos
                   </Anchor>
                 </Group>
@@ -171,13 +180,10 @@ export function HeaderMenu() {
                   <Group justify="space-between">
                     <div>
                       <Text fw={500} fz="sm">
-                        Quero mais opções
-                      </Text>
-                      <Text size="xs" c="dimmed">
-                        Se as opções acima não te atenderam...
+                        Tem um evento com demandas específicas?
                       </Text>
                     </div>
-                    <Button variant="default">Mais opções</Button>
+                    <Button component={Link} href="/produtos/pedido-personalizado" variant="default">Orçamento Personalizado</Button>
                   </Group>
                 </div>
               </HoverCard.Dropdown>
