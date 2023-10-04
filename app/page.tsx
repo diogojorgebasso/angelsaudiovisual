@@ -1,75 +1,81 @@
-'use client';
-
-import {
-  Container,
-  Title,
-  Text,
-  Group,
-  Button,
-  Avatar,
-  Stack,
-  Badge,
-} from '@mantine/core';
 import { FaStar } from 'react-icons/fa';
 import Image from 'next/image';
-import classes from '@/components/Hero/Hero.module.css';
 import YouTubeFrame from '@/components/Hero/YouTubeFrame';
 
-export default function Home() {
+export default function Page() {
   return (
-    <>
-      <Container size="md">
-        <div className={classes.inner}>
-          <div className={classes.content}>
-            <Title className={classes.title}>
-              Nós <span className={classes.highlight}>cuidamos</span>
-              de sua imagem em 7 dias.
-            </Title>
-            <Text c="dimmed" mt="md">
-              Seja Foto, Vídeo ou Drone, seu evento merece o melhor.
-              Muuuito além da entrega rápida e profissional.
-            </Text>
-            <Group mt={30}>
-              <Button radius="xl" size="md" className={classes.control}>
-                Faça um orçamento agora. Sem CC
-              </Button>
-            </Group>
-            <Group justify="space-between" mt="md">
-              <Avatar.Group spacing="md">
-                <Avatar src="/gustavo-hermetto.jpg" radius="xl" />
-                <Avatar src="/raquel-beyoha.jpg" radius="xl" />
-                <Avatar src="/geovanna-leone.jpg" radius="xl" />
-                <Avatar radius="xl">+30</Avatar>
-                <Stack gap="xs">
-                  <span>
-                    <FaStar color="pink" /><FaStar color="pink" /><FaStar color="pink" /><FaStar color="pink" /><FaStar color="pink" />
-                  </span>
-                  <Text>(pelo Google)</Text>
-                </Stack>
-              </Avatar.Group>
-            </Group>
-          </div>
-          <div className={classes.image}>
-            <YouTubeFrame video="XWOF98gtN-M" width={800} height={800} thumbnailQuality="mqdefault" />
+    <main className="container mx-auto ">
+      <section className="background-radial-gradient">
+
+        <div className="px-6 py-12 text-center md:px-12 lg:text-left">
+          <div className="container mx-auto">
+            <div className="grid items-center gap-12 lg:grid-cols-2">
+              <div className="mt-12 lg:mt-0">
+                <h1 className="mb-12 text-5xl font-bold tracking-tight text-[hsl(218,81%,95%)] md:text-6xl xl:text-7xl">
+                  Nós cuidamos <br /><span className="text-[hsl(218,81%,75%)]">de sua imagem.</span>
+                </h1>
+                <p className="text-lg text-[hsl(218,81%,95%)]">
+                  Seja Foto, Vídeo ou Drone, seu evento merece o melhor.<br />
+                  Muuuito além da entrega rápida e profissional.
+                  quos.
+                </p>
+                <button
+                  type="button"
+                  className="rounded-full "
+                >Faça um orçamento agora. É grátis.
+                </button>
+                <Image src="/gustavo-hermeto.jpg" height={32} width={32} alt="Gustavo Hermeto, atual presidente do DA" className="w-32 rounded-full" />
+                <Image src="/giovanna-leone.jpg" height={32} width={32} alt="Giovanna Leone, atual presidente do Albatroz" className="w-32 rounded-full" />
+                <Image src="/raquel-beyoha.jpg" height={32} width={32} alt="Raquel Beyoha, atual presidente do EPA" className="w-32 rounded-full" />
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>+30
+              </div>
+              <div className="mb-12 lg:mb-0">
+                <div className="embed-responsive embed-responsive-16by9 relative w-full overflow-hidden rounded-lg shadow-lg">
+                  <iframe
+                    title="Video de apresentação da Angels"
+                    className="embed-responsive-item absolute top-0 right-0 bottom-0 left-0 h-full w-full"
+                    src="https://www.youtube.com/embed/vlDzYIIOYmM?enablejsapi=1&amp;origin=https%3A%2F%2Fmdbootstrap.com"
+                    data-gtm-yt-inspected-2340190_699="true"
+                    id="240632615"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <Group gap="xs">
-          <Badge>Empresas parceiras</Badge>
-          <Image src="/barcultural.png" alt="Logo do Bar Cultural, maior Da da América Latina" width={170} height={100} />
-          <Image src="/jyba.png" alt="Logo do Jybá, eleita melhor Pilsen do Brasil" width={170} height={100} />
-          <Image src="/albatroz.png" alt="Logo do Albatroz, Diretório Acadêmico de Medicina" width={170} height={100} />
-          <Image
-            src="/mfbd.png"
-            alt="Logo do MFBD, Escritório com mais de 20 anos de atuação"
-            width={180}
-            height={100}
-          />
-        </Group>
-      </Container>
-      <Container size="md">
-        <Title order={2}>Uma imagem vale mais <br /> do que mil palavras.</Title>
-        <Text>Como você está posicionado indica do que seu negócio é sobre.</Text>
-      </Container>
-    </>
+        <div className="mb-32 text-center">
+          <h2 className="mb-16 text-3xl font-bold">
+            Mais de <u className="">30</u> projetos entregues
+          </h2>
+
+          <div className="grid items-center gap-6 md:grid-cols-2 lg:grid-cols-4">
+            <div className="mb-12 lg:mb-0">
+              <Image className="px-6 md:px-12" src="/barcultural.png" alt="Logo do Bar Cultural, maior Da da América Latina" width={170} height={100} />
+            </div>
+
+            <div className="mb-12 lg:mb-0">
+              <Image className="px-6 md:px-12" src="/jyba.png" alt="Logo do Jybá, eleita melhor Pilsen do Brasil" width={170} height={100} />
+            </div>
+
+            <div className="mb-12 lg:mb-0">
+              <Image className="px-6 md:px-12" src="/albatroz.png" alt="Logo do Albatroz, Diretório Acadêmico de Medicina" width={170} height={100} />
+            </div>
+
+            <div className="mb-12 lg:mb-0">
+              <Image
+                className="px-6 md:px-12"
+                src="/mfbd.png"
+                alt="Logo do MFBD, Escritório com mais de 20 anos de atuação"
+                width={180}
+                height={100}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
   );
 }

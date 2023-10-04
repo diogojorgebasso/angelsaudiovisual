@@ -1,17 +1,14 @@
 import React from 'react';
+
 //Next
 import { Inter } from 'next/font/google';
 import type { Metadata } from 'next';
 
-// UI
-import '@mantine/core/styles.css';
-import { MantineProvider, ColorSchemeScript } from '@mantine/core';
-
 // Context
-import { AuthContextProvider } from '../context/AuthContext';
+import { AuthContextProvider } from '@/context/AuthContext';
 
 //SEO
-import { theme } from '../theme';
+import './globals.css';
 
 import { HeaderMenu } from '@/components/Menu/HeaderMenu';
 import Footer from '@/components/Footer/Footer';
@@ -19,7 +16,7 @@ import Footer from '@/components/Footer/Footer';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Angels Audiovisual - Fotografia e Vídeo',
+  title: 'Angels Audiovisual - Produtora de Itajubá',
   description:
     'Produtora audiovisual para eventos universitários e empresariais. De Minas Gerais para o Brasil.',
   applicationName: 'Angels Audiovisual',
@@ -34,7 +31,6 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <head>
-        <ColorSchemeScript />
         <link rel="shortcut icon" href="/favicon.svg" sizes="any" />
         <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
         <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
@@ -58,13 +54,11 @@ export default function RootLayout({
         />
       </head>
       <body className={inter.className}>
-        <MantineProvider theme={theme}>
-          <AuthContextProvider>
-            <HeaderMenu />
-            {children}
-            <Footer />
-          </AuthContextProvider>
-        </MantineProvider>
+        <AuthContextProvider>
+          <HeaderMenu />
+          {children}
+          <Footer />
+        </AuthContextProvider>
       </body>
     </html>
   );

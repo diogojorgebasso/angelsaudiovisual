@@ -3,7 +3,6 @@
 import React from 'react';
 
 import { onAuthStateChanged, getAuth, User as FirebaseUser } from 'firebase/auth';
-import { Loader } from '@mantine/core';
 import firebase_app from '../firebase/config';
 
 const auth = getAuth(firebase_app);
@@ -40,7 +39,7 @@ export const AuthContextProvider = ({ children }: { children: React.ReactNode })
 
   return (
     <AuthContext.Provider value={{ user }}>
-      {loading ? <Loader color="blue" /> : children}
+      {loading ? 'loading' : children}
     </AuthContext.Provider>
   );
 };
