@@ -144,9 +144,6 @@ export function HeaderMenu() {
           />
 
           <Group h="100%" gap={0} visibleFrom="sm">
-            <a href="/" className={classes.link}>  {/* Trocar Home por outra página ou tirar daí */}
-              Home
-            </a>
             <HoverCard width={600} position="bottom" radius="md" shadow="md" withinPortal>
               <HoverCard.Target>
                 <a href="/produtos" className={classes.link}>
