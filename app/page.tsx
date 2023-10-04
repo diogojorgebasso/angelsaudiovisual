@@ -23,15 +23,15 @@ export default function Home() {
           <div className={classes.content}>
             <Title className={classes.title}>
               Nós <span className={classes.highlight}>cuidamos</span>
-              de sua imagem.
+              de sua imagem em 7 dias.
             </Title>
             <Text c="dimmed" mt="md">
-              Seja Foto, Vídeo ou drone, seu evento merece o melhor,
-              muito além da entrega rápida e profissional.
+              Seja Foto, Vídeo ou Drone, seu evento merece o melhor.
+              Muuuito além da entrega rápida e profissional.
             </Text>
             <Group mt={30}>
               <Button radius="xl" size="md" className={classes.control}>
-                Faça um orçamento agora. É grátis!
+                Faça um orçamento agora. Sem CC
               </Button>
             </Group>
             <Group justify="space-between" mt="md">

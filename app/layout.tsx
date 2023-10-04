@@ -1,16 +1,20 @@
 import React from 'react';
+//Next
+import { Inter } from 'next/font/google';
+import type { Metadata } from 'next';
 
 // UI
 import '@mantine/core/styles.css';
 import { MantineProvider, ColorSchemeScript } from '@mantine/core';
-import { Inter } from 'next/font/google';
+
+// Context
+import { AuthContextProvider } from '../context/AuthContext';
 
 //SEO
-import type { Metadata } from 'next';
 import { theme } from '../theme';
 
-import { HeaderMenu } from '../components/Menu/HeaderMenu';
-import { AuthContextProvider } from '../context/AuthContext';
+import { HeaderMenu } from '@/components/Menu/HeaderMenu';
+import Footer from '@/components/Footer/Footer';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -32,7 +36,6 @@ export default function RootLayout({
       <head>
         <ColorSchemeScript />
         <link rel="shortcut icon" href="/favicon.svg" sizes="any" />
-        <meta charSet="UTF-8" />
         <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
         <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
         <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png" />
@@ -51,7 +54,7 @@ export default function RootLayout({
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
         <meta
           name="viewport"
-          content="minimum-scale=1, initial-scale=1, width=device-width, user-scalable=no"
+          content="minimum-scale=1, initial-scale=1, width=device-width,"
         />
       </head>
       <body className={inter.className}>
@@ -59,6 +62,7 @@ export default function RootLayout({
           <AuthContextProvider>
             <HeaderMenu />
             {children}
+            <Footer />
           </AuthContextProvider>
         </MantineProvider>
       </body>

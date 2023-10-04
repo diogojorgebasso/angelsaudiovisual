@@ -1,60 +1,10 @@
 import React from 'react';
-import { Text, Container, ActionIcon, Group, rem } from '@mantine/core';
-import { FaInstagram, FaFacebook, FaPinterest, FaWhatsapp } from 'react-icons/fa';
+import { Text, Container, Group } from '@mantine/core';
+import { FaInstagram, FaFacebook, FaPinterest, FaWhatsapp, FaTiktok } from 'react-icons/fa';
 import Image from 'next/image';
 import classes from './FooterLinks.module.css';
 
-const data = [
-  {
-    title: 'About',
-    links: [
-      { label: 'Produtos', link: '/produtos' },
-      { label: 'Contato', link: '/contato' },
-      { label: 'Forums', link: '#' },
-    ],
-  },
-  {
-    title: 'Project',
-    links: [
-      { label: 'Contribute', link: '#' },
-      { label: 'Media assets', link: '#' },
-      { label: 'Changelog', link: '#' },
-      { label: 'Releases', link: '#' },
-    ],
-  },
-  {
-    title: 'Community',
-    links: [
-      { label: 'Join Discord', link: '#' },
-      { label: 'Follow on Twitter', link: '#' },
-      { label: 'Email newsletter', link: '#' },
-      { label: 'GitHub discussions', link: '#' },
-    ],
-  },
-];
-
 export default function Footer() {
-  const groups = data.map((group) => {
-    const links = group.links.map((link, index) => (
-      <Text<'a'>
-        key={index}
-        className={classes.link}
-        component="a"
-        href={link.link}
-        onClick={(event) => event.preventDefault()}
-      >
-        {link.label}
-      </Text>
-    ));
-
-    return (
-      <div className={classes.wrapper} key={group.title}>
-        <Text className={classes.title}>{group.title}</Text>
-        {links}
-      </div>
-    );
-  });
-
   return (
     <footer className={classes.footer}>
       <Container className={classes.inner}>
@@ -64,26 +14,58 @@ export default function Footer() {
             Build fully functional accessible web applications faster than ever
           </Text>
         </div>
-        <div className={classes.groups}>{groups}</div>
+        <div className={classes.groups}>
+          <div className={classes.wrapper}>
+            <Text className={classes.title}>Sobre</Text>
+            <Text
+              className={classes.link}
+              component="a"
+              href="/equipe"
+            >
+              Nossa equipe
+            </Text>
+            <Text
+              className={classes.link}
+              component="a"
+              href="/valores"
+            >
+              Nossa equipe
+            </Text>
+          </div>
+          <div className={classes.wrapper}>
+            <Text className={classes.title}>Legal</Text>
+            <Text
+              className={classes.link}
+              component="a"
+              href="/politica-privacidade"
+            >
+              Produtos
+            </Text>
+          </div>
+
+        </div>
       </Container>
       <Container className={classes.afterFooter}>
         <Text c="dimmed" size="sm">
-          © 2020 mantine.dev. All rights reserved.
+          © 2023 Angels Audiovisual. Todos os direitos reservados.
         </Text>
 
-        <Group gap={0} className={classes.social} justify="flex-end" wrap="nowrap">
-          <ActionIcon size="lg" color="gray" variant="subtle">
-            <FaWhatsapp style={{ width: rem(18), height: rem(18) }} />
-          </ActionIcon>
-          <ActionIcon size="lg" color="gray" variant="subtle">
-            <FaFacebook style={{ width: rem(18), height: rem(18) }} />
-          </ActionIcon>
-          <ActionIcon size="lg" color="gray" variant="subtle">
-            <FaPinterest style={{ width: rem(18), height: rem(18) }} />
-          </ActionIcon>
-          <ActionIcon size="lg" color="gray" variant="subtle">
-            <FaInstagram style={{ width: rem(18), height: rem(18) }} />
-          </ActionIcon>
+        <Group gap={10} className={classes.social} justify="flex-end" wrap="nowrap">
+          <a target="blank" rel="noreferrer noopener" title="Link para o número do CEO" href="https://wa.me/5512991877910?text=Ol%C3%A1%2C+Diogo+podemos+conversar%3F+Consegui+seu+n%C3%BAmero+pelo+site.">
+            <FaWhatsapp color="black" />
+          </a>
+          <a target="blank" rel="noreferrer noopener" title="Link para a página do Facebook" href="https://www.facebook.com/angelsaudiovisual">
+            <FaFacebook color="black" />
+          </a>
+          <a target="blank" rel="noreferrer noopener" title="Link para o perfil do Pinterest" href="https://br.pinterest.com/angelsaudiovisual/">
+            <FaPinterest color="black" />
+          </a>
+          <a target="blank" rel="noreferrer noopener" title="Link para o perfil do Instagram" href="https://www.instagram.com/angelsaudiovisual/">
+            <FaInstagram color="black" />
+          </a>
+          <a target="blank" rel="noreferrer noopener" title="Link para o perfil do TikTok" href="https://www.tiktok.com/@angelsaudiovisual">
+            <FaTiktok color="black" />
+          </a>
         </Group>
       </Container>
     </footer>

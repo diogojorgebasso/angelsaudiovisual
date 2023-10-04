@@ -194,6 +194,10 @@ export function HeaderMenu() {
           </Group>
 
           <Group visibleFrom="sm">
+            <Indicator inline processing size={12}>
+              <FaRegEnvelopeOpen />
+            </Indicator>
+            <Switch size="md" color="dark.4" onLabel={sunIcon} offLabel={moonIcon} />
             {!user ? (
               <>
                 <Button
@@ -213,7 +217,7 @@ export function HeaderMenu() {
             )}
           </Group>
 
-          <Burger opened={drawerOpened} onClick={toggleDrawer} hiddenFrom="sm" />
+          <Burger opened={drawerOpened} onClick={toggleDrawer} hiddenFrom="sm" name="Botão de sanduíche para smartphones" />
         </Group>
       </header>
 
@@ -229,9 +233,6 @@ export function HeaderMenu() {
         <ScrollArea h={`calc(100vh - ${rem(80)})`} mx="-md">
           <Divider my="sm" />
 
-          <a href="#" className={classes.link}>
-            Home
-          </a>
           <UnstyledButton className={classes.link} onClick={toggleLinks}>
             <Center inline>
               <Box component="span" mr={5}>
