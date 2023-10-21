@@ -1,7 +1,8 @@
 'use client';
 
 import React from 'react';
-
+import Image from 'next/image';
+import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 
 import signUp, { signUpWithFacebook, signUpWithGoogle } from '@/firebase/auth/signup';
@@ -110,7 +111,17 @@ export default function Page() {
                   id="exampleFormControlInput2"
                   placeholder="Email address"
                 />
-                Email address
+                Endereço de Email
+              </div>
+
+              <div className="relative mb-6" data-te-input-wrapper-init>
+                <input
+                  type="text"
+                  className="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[2.15] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                  id="exampleFormControlInput2"
+                  placeholder="Senha"
+                />
+                Senha
               </div>
 
               {/* Login button */}
@@ -127,11 +138,11 @@ export default function Page() {
 
                 {/* Register link */}
                 <p className="mb-0 mt-2 pt-1 text-sm font-semibold">
-                  Não tem uma conta?
+                  Já tem conta?
                   <Link
-                    href="/cadastrar"
+                    href="/entrar"
                     className="text-danger transition duration-150 ease-in-out hover:text-danger-600 focus:text-danger-600 active:text-danger-700"
-                  >Quero me registrar
+                  >Quero entrar
                   </Link>
                 </p>
               </div>
