@@ -5,11 +5,15 @@ import { useAuthContext } from '@/context/AuthContext';
 
 export default function ModalProfile() {
   const { user } = useAuthContext();
-  const [imageUrl, setImageUrl] = useState<string | null>();
+  const [imageUrl, setImageUrl] = useState('');
 
   useEffect(() => {
     if (user) {
-      setImageUrl(user?.photoURL);
+      if (user.photoURL) {
+        setImageUrl(user.photoURL);
+      } else {
+        setImageUrl('https://angelsaudiovisual.com/user.png');
+      }
     }
   }, [user]);
 
@@ -37,6 +41,7 @@ export default function ModalProfile() {
           alt="Imagem de perfil, usuário logado"
           loading="lazy"
         />
+
       </a>
       {/* Second dropdown menu */}
       <ul

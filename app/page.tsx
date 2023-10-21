@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import YouTubeFrame from '@/components/Hero/YouTubeFrame';
+//import YouTubeFrame from '@/components/Hero/YouTubeFrame';
 
 export default function Page() {
   return (
@@ -16,7 +16,6 @@ export default function Page() {
               <p className="text-lg text-[hsl(218,81%,95%)]">
                 Seja Foto, Vídeo ou Drone, seu evento merece o melhor.<br />
                 Muuuito além da entrega rápida e profissional.
-                quos.
               </p>
               <button
                 type="button"

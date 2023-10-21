@@ -1,7 +1,6 @@
 'use client';
 
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
 import { Illustration } from '@/components/Error/Illustration';
 
 export default function Error() {
