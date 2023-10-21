@@ -6,6 +6,7 @@ import type { Metadata } from 'next';
 
 // Context
 import { AuthContextProvider } from '@/context/AuthContext';
+import { DarkContext } from '@/context/DarkContext';
 
 //SEO
 import './globals.css';
@@ -55,9 +56,11 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <AuthContextProvider>
-          <HeaderMenu />
-          {children}
-          <Footer />
+          <DarkContext>
+            <HeaderMenu />
+            {children}
+            <Footer />
+          </DarkContext>
         </AuthContextProvider>
       </body>
     </html>

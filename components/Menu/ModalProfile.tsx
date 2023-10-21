@@ -1,21 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-//icons
-import {
-  FaHeart,
-  FaRegArrowAltCircleDown,
-  FaCommentDots,
-  FaBookmark,
-  FaTrashAlt,
-  FaSyncAlt,
-  FaPeopleArrows,
-  FaSignInAlt,
-} from 'react-icons/fa';
 
-import { useAuthContext } from '../../context/AuthContext';
+import { useAuthContext } from '@/context/AuthContext';
 
 export default function ModalProfile() {
   const { user } = useAuthContext();
+  const [imageUrl, setImageUrl] = useState<string | null>();
+
+  useEffect(() => {
+    if (user) {
+      setImageUrl(user?.photoURL);
+    }
+  }, [user]);
 
   return (
     <div
@@ -34,7 +30,7 @@ export default function ModalProfile() {
       >
         {/* User avatar */}
         <Image
-          src="https://tecdn.b-cdn.net/img/new/avatars/2.jpg"
+          src={imageUrl}
           className="rounded-full"
           height={25}
           width={25}

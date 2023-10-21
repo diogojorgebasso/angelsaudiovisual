@@ -2,37 +2,40 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { useTheme } from 'next-themes';
 
 import {
   FaRegMoon,
-  FaRegSun,
+  FaCloudSun,
 } from 'react-icons/fa';
 
-import useDarkMode from '@/context/useDarkMode';
 import ModalProfile from './ModalProfile';
 import ProductMegaMenu from './ProductMegaMenu';
 import { useAuthContext } from '@/context/AuthContext';
+import LoginSubscribeButton from './LoginSubscribeButton';
 
 export function HeaderMenu() {
   const { user } = useAuthContext();
+  const { theme, setTheme } = useTheme();
 
   const ThemeIcon = () => {
-    const [darkTheme, setDarkTheme] = useDarkMode();
-    const handleMode = () => setDarkTheme(!darkTheme);
+    if (theme === 'dark') {
+      return (
+        <button type="button" onClick={() => setTheme('light')}>
+          <FaCloudSun size="24" className="top-navigation-icon" />
+        </button>
+      );
+    }
     return (
-      <span onClick={handleMode}>
-        {darkTheme ? (
-          <FaRegSun size="24" className="top-navigation-icon" />
-        ) : (
-          <FaRegMoon size="24" className="top-navigation-icon" />
-        )}
-      </span>
+      <button type="button" onClick={() => setTheme('dark')}>
+        <FaRegMoon size="24" className="top-navigation-icon" />
+      </button>
     );
   };
 
   return (
     <nav
-      className="fixed top-0 flex w-full flex-wrap items-center justify-between bg-[#FBFBFB] py-2 text-neutral-500 shadow-lg hover:text-neutral-700 focus:text-neutral-700 dark:bg-neutral-600 lg:py-4"
+      className="relative top-0 flex w-full flex-wrap items-center justify-center py-2 text-neutral-600 shadow-lg hover:text-neutral-700 focus:text-neutral-700 dark:bg-neutral-600 lg:py-4"
       data-te-navbar-ref
     >
       <div className="flex w-full flex-wrap items-center justify-between px-3">
@@ -72,18 +75,18 @@ export function HeaderMenu() {
           {/* Logo */}
           <a
             className="mb-4 ml-2 mr-5 mt-3 flex items-center text-neutral-900 hover:text-neutral-900 focus:text-neutral-900 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:mb-0 lg:mt-0"
-            href="#"
+            href="/"
           >
             <Image
               src="/angels.png"
-              height={15}
-              width={15}
+              height={30}
+              width={30}
               alt="Logo Angels"
             />
           </a>
           {/* Left navigation links */}
           <ul
-            className="list-style-none mr-auto flex flex-col pl-0 lg:flex-row"
+            className=" list-style-none mr-auto flex flex-col pl-0 lg:flex-row"
             data-te-navbar-nav-ref
           >
             {/* Mefga Product Menu */}
@@ -110,7 +113,7 @@ export function HeaderMenu() {
         </div>
 
         {/* Right elements */}
-        <div className="relative flex items-center">
+        <div className="relative m-4 flex items-center">
           {/* Cart Icon */}
           <ThemeIcon />
 
@@ -148,8 +151,9 @@ export function HeaderMenu() {
               <span
                 className="absolute -mt-4 ml-2.5 rounded-full bg-danger px-[0.35em] py-[0.15em] text-[0.6rem] font-bold leading-none text-white"
               >1
-              </span
-              >
+              </span>
+              {/* user avatar */}
+              {user ? <ModalProfile /> : <LoginSubscribeButton />}
             </a>
             {/* First dropdown menu */}
             <ul
