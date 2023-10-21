@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
+
 'use client';
 
 //import YouTubeFrame from '@/components/Hero/YouTubeFrame';
@@ -42,19 +44,19 @@ export default function Page() {
 
             <div className="grid items-center gap-6 md:grid-cols-2 lg:grid-cols-4">
               <div className="mb-12 lg:mb-0">
-                <Image className="px-6 md:px-12" src="/barcultural.png" alt="Logo do Bar Cultural, maior Da da América Latina" width={170} height={100} />
+                <img className="px-6 md:px-12" src="/barcultural.png" alt="Logo do Bar Cultural, maior Da da América Latina" width={170} height={100} />
               </div>
 
               <div className="mb-12 lg:mb-0">
-                <Image className="px-6 md:px-12" src="/jyba.png" alt="Logo do Jybá, eleita melhor Pilsen do Brasil" width={170} height={100} />
+                <img className="px-6 md:px-12" src="/jyba.png" alt="Logo do Jybá, eleita melhor Pilsen do Brasil" width={170} height={100} />
               </div>
 
               <div className="mb-12 lg:mb-0">
-                <Image className="px-6 md:px-12" src="/albatroz.png" alt="Logo do Albatroz, Diretório Acadêmico de Medicina" width={170} height={100} />
+                <img className="px-6 md:px-12" src="/albatroz.png" alt="Logo do Albatroz, Diretório Acadêmico de Medicina" width={170} height={100} />
               </div>
 
               <div className="mb-12 lg:mb-0">
-                <Image
+                <img
                   className="px-6 md:px-12"
                   src="/mfbd.png"
                   alt="Logo do MFBD, Escritório com mais de 20 anos de atuação"
