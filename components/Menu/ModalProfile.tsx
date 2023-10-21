@@ -1,5 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
 
 import { useAuthContext } from '@/context/AuthContext';
 
@@ -33,7 +33,7 @@ export default function ModalProfile() {
         aria-expanded="false"
       >
         {/* User avatar */}
-        <Image
+        <img
           src={imageUrl}
           className="rounded-full"
           height={25}

@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import { useTheme } from 'next-themes';
 
 import ModalProfile from './ModalProfile';
@@ -72,10 +71,13 @@ export function HeaderMenu() {
         >
           {/* Logo */}
           <a
-            className="mb-4 ml-2 mr-5 mt-3 flex items-center text-neutral-900 hover:text-neutral-900 focus:text-neutral-900 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:mb-0 lg:mt-0"
             href="/"
+            title="Logo Angels"
+            aria-label="Logo Angels"
+            className="mb-4 ml-2 mr-5 mt-3 flex items-center text-neutral-900 hover:text-neutral-900 focus:text-neutral-900 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:mb-0 lg:mt-0"
           >
-            <Image
+            {/* eslint-disable-next-line @next/next/no-img-element*/}
+            <img
               src="/angels.png"
               height={30}
               width={30}
