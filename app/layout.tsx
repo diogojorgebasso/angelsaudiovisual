@@ -3,7 +3,6 @@ import React from 'react';
 //Next
 import { Inter } from 'next/font/google';
 import type { Metadata } from 'next';
-
 // Context
 import { AuthContextProvider } from '@/context/AuthContext';
 import { DarkContext } from '@/context/DarkContext';
@@ -33,6 +32,8 @@ export default function RootLayout({
     <html lang="pt-BR">
       <head>
         <link rel="shortcut icon" href="/favicon.svg" sizes="any" />
+        <script src="https://www.google.com/recaptcha/api.js"></script>
+
         <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
         <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
         <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png" />
