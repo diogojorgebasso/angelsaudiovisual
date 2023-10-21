@@ -14,7 +14,7 @@ export default function Footer() {
         </div>
         {/* Social network icons container */}
         <div className="flex justify-center">
-          <a target="blank" rel="noreferrer noopener" href="https://www.instagram.com/angelsaudiovisual/" className="mr-6 text-neutral-600 dark:text-neutral-200">
+          <a aria-label="Ícone de redirecionamento para o Instagram" target="blank" rel="noreferrer noopener" href="https://www.instagram.com/angelsaudiovisual/" className="mr-6 text-neutral-600 dark:text-neutral-200">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-4 w-4"
@@ -27,17 +27,17 @@ export default function Footer() {
             </svg>
 
           </a>
-          <a target="blank" rel="noreferrer noopener" href="https://web.whatsapp.com/send/?phone=5512991877910&text=Ol%C3%A1%2C+Angels!+Podem+me+ajudar%3F&type=phone_number&app_absent=0" className="mr-6 text-neutral-600 dark:text-neutral-200">
+          <a aria-label="Ícone de redirecionamento para o WhatsApp" target="blank" rel="noreferrer noopener" href="https://web.whatsapp.com/send/?phone=5512991877910&text=Ol%C3%A1%2C+Angels!+Podem+me+ajudar%3F&type=phone_number&app_absent=0" className="mr-6 text-neutral-600 dark:text-neutral-200">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
               <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
             </svg>
           </a>
-          <a target="blank" rel="noreferrer noopener" href="https://www.pinterest.com/angelsaudiovisual/" className="mr-6 text-neutral-600 dark:text-neutral-200">
+          <a aria-label="Ícone de redirecionamento para o Pinterest" target="blank" rel="noreferrer noopener" href="https://www.pinterest.com/angelsaudiovisual/" className="mr-6 text-neutral-600 dark:text-neutral-200">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
               <path d="M8 0a8 8 0 0 0-2.915 15.452c-.07-.633-.134-1.606.027-2.297.146-.625.938-3.977.938-3.977s-.239-.479-.239-1.187c0-1.113.645-1.943 1.448-1.943.682 0 1.012.512 1.012 1.127 0 .686-.437 1.712-.663 2.663-.188.796.4 1.446 1.185 1.446 1.422 0 2.515-1.5 2.515-3.664 0-1.915-1.377-3.254-3.342-3.254-2.276 0-3.612 1.707-3.612 3.471 0 .688.265 1.425.595 1.826a.24.24 0 0 1 .056.23c-.061.252-.196.796-.222.907-.035.146-.116.177-.268.107-1-.465-1.624-1.926-1.624-3.1 0-2.523 1.834-4.84 5.286-4.84 2.775 0 4.932 1.977 4.932 4.62 0 2.757-1.739 4.976-4.151 4.976-.811 0-1.573-.421-1.834-.919l-.498 1.902c-.181.695-.669 1.566-.995 2.097A8 8 0 1 0 8 0z" />
             </svg>
           </a>
-          <a target="blank" rel="noreferrer noopener" href="https://www.linkedin.com/company/angelsaudiovisual/" className="mr-6 text-neutral-600 dark:text-neutral-200">
+          <a aria-label="Ícone de redirecionamento para o Linkedin" target="blank" rel="noreferrer noopener" href="https://www.linkedin.com/company/angelsaudiovisual/" className="mr-6 text-neutral-600 dark:text-neutral-200">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-4 w-4"
@@ -49,12 +49,12 @@ export default function Footer() {
               />
             </svg>
           </a>
-          <a target="blank" rel="noreferrer noopener" href="https://tiktok.com/@angelsaudiovisual" className=" mr-6 text-neutral-600 dark:text-neutral-200">
+          <a aria-label="Ícone de redirecionamento para o Tiktok" target="blank" rel="noreferrer noopener" href="https://tiktok.com/@angelsaudiovisual" className=" mr-6 text-neutral-600 dark:text-neutral-200">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-tiktok" viewBox="0 0 16 16">
               <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3V0Z" />
             </svg>
           </a>
-          <a target="blank" rel="noreferrer noopener" href="https://www.facebook.com/angelsaudiovisual" className="text-neutral-600 dark:text-neutral-200">
+          <a aria-label="Ícone de redirecionamento para o Facebook" target="blank" rel="noreferrer noopener" href="https://www.facebook.com/angelsaudiovisual" className="text-neutral-600 dark:text-neutral-200">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-4 w-4"
@@ -160,7 +160,7 @@ export default function Footer() {
             <h6
               className="mb-4 flex justify-center font-semibold uppercase md:justify-start"
             >
-              Contact
+              Contato
             </h6>
             <p className="mb-4 flex items-center justify-center md:justify-start">
               <svg
@@ -210,19 +210,11 @@ export default function Footer() {
               +55(12)99187-7910
             </p>
             <p className="flex items-center justify-center md:justify-start">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                className="mr-3 h-5 w-5"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M7.875 1.5C6.839 1.5 6 2.34 6 3.375v2.99c-.426.053-.851.11-1.274.174-1.454.218-2.476 1.483-2.476 2.917v6.294a3 3 0 003 3h.27l-.155 1.705A1.875 1.875 0 007.232 22.5h9.536a1.875 1.875 0 001.867-2.045l-.155-1.705h.27a3 3 0 003-3V9.456c0-1.434-1.022-2.7-2.476-2.917A48.716 48.716 0 0018 6.366V3.375c0-1.036-.84-1.875-1.875-1.875h-8.25zM16.5 6.205v-2.83A.375.375 0 0016.125 3h-8.25a.375.375 0 00-.375.375v2.83a49.353 49.353 0 019 0zm-.217 8.265c.178.018.317.16.333.337l.526 5.784a.375.375 0 01-.374.409H7.232a.375.375 0 01-.374-.409l.526-5.784a.373.373 0 01.333-.337 41.741 41.741 0 018.566 0zm.967-3.97a.75.75 0 01.75-.75h.008a.75.75 0 01.75.75v.008a.75.75 0 01-.75.75H18a.75.75 0 01-.75-.75V10.5zM15 9.75a.75.75 0 00-.75.75v.008c0 .414.336.75.75.75h.008a.75.75 0 00.75-.75V10.5a.75.75 0 00-.75-.75H15z"
-                  clipRule="evenodd"
-                />
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M14.763.075A.5.5 0 0 1 15 .5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V14h-1v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V10a.5.5 0 0 1 .342-.474L6 7.64V4.5a.5.5 0 0 1 .276-.447l8-4a.5.5 0 0 1 .487.022ZM6 8.694 1 10.36V15h5V8.694ZM7 15h2v-1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V15h2V1.309l-7 3.5V15Z" />
+                <path d="M2 11h1v1H2v-1Zm2 0h1v1H4v-1Zm-2 2h1v1H2v-1Zm2 0h1v1H4v-1Zm4-4h1v1H8V9Zm2 0h1v1h-1V9Zm-2 2h1v1H8v-1Zm2 0h1v1h-1v-1Zm2-2h1v1h-1V9Zm0 2h1v1h-1v-1ZM8 7h1v1H8V7Zm2 0h1v1h-1V7Zm2 0h1v1h-1V7ZM8 5h1v1H8V5Zm2 0h1v1h-1V5Zm2 0h1v1h-1V5Zm0-2h1v1h-1V3Z" />
               </svg>
-              +
+              CNPJ: 52.422.459/0001-87
             </p>
           </div>
         </div>

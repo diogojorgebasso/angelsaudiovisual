@@ -3,13 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'i9.ytimg.com',
-        port: '',
-      },
-    ],
+    domains: ['i9.ytimg.com', 'firebasestorage.googleapis.com'],
   },
 };
 

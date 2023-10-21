@@ -6,7 +6,7 @@ export default function Page() {
     <div className="container my-24 mx-auto md:px-6">
       <section className="mb-32 text-center">
         <h2 className="mb-12 text-3xl font-bold">
-          Meet the <u className="text-primary dark:text-primary-400">team</u>
+          Conheça o <u className="text-primary dark:text-primary-400">time</u>
         </h2>
 
         <div className="grid gap-x-6 md:grid-cols-3 lg:gap-x-12">
