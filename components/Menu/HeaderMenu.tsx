@@ -33,7 +33,7 @@ export function HeaderMenu() {
 
   return (
     <>
-      <header className="bg-gray-800 text-white p-4 flex justify-between items-center">
+      <header className="text-white p-4 flex justify-between items-center">
         {/*Mobile */}
         <div className="flex w-full flex-wrap items-center justify-between px-3">
           <button
@@ -57,7 +57,7 @@ export function HeaderMenu() {
           </button>
           {/*End Mobile */}
 
-          <div className="flex items-center">
+          <div className="relative flex items-center">
             <a href="/">
               <img src="angels.png" alt="Logo" className="w-10 h-10" />
             </a>
@@ -83,7 +83,7 @@ export function HeaderMenu() {
                 </span>
               </a>
 
-              <div data-te-dropdown-menu-ref className=" grid grid-cols-2 lg:grid-cols-4 gap-4 absolute hidden space-y-2 bg-white text-black mt-2 py-2 px-4 group-hover:block">
+              <div data-te-dropdown-menu-ref className="z-10 grid grid-cols-2 lg:grid-cols-4 gap-4 absolute hidden space-y-2 bg-white text-black mt-2 py-2 px-4 group-hover:block">
                 <ul>
                   <li>
 
