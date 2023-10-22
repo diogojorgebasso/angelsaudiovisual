@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
+
 'use client';
 
 import ReactPlayer from 'react-player/lazy';
@@ -20,16 +22,16 @@ export default function Feautures() {
               Artísticos
             </p>
           </div>
-          <p className=" mb-6 text-neutral-500 dark:text-neutral-300">
-            Ut pretium ultricies dignissim. Sed sit amet mi eget urna placerat
-            vulputate. Ut vulputate est non quam dignissim elementum. Donec a
-            ullamcorper diam.
+          <p className=" mb-6 ">
+            Uma produtora de vídeos artísticos é como um coletivo de sonhadores
+            e contadores de histórias. Nessa pequena mas apaixonada equipe,
+            você encontra pessoas com um olhar especial para a beleza e a
+            emoção que a vida cotidiana esconde. Eles são os mágicos que
+            transformam momentos simples em momentos extraordinários.
           </p>
-          <p className="text-neutral-500 dark:text-neutral-300">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea quae
-            nulla saepe rerum aspernatur odio amet perferendis tempora
-            mollitia? Ratione unde magni omnis quaerat blanditiis cumque
-            dolore placeat rem dignissimos?
+          <p className="">
+            Este ao lado é nosso Aftermovie para uma atração dos Jogos da INATEL.
+            <a className="underline" target="blank" rel="noopener noreferrer nofollow" href="https://www.youtube.com/@AngelsAudiovisual">No nosso canal do Youtube você encontra mais vídeos como esse.</a>
           </p>
         </div>
       </div>
@@ -41,8 +43,8 @@ export default function Feautures() {
             data-te-ripple-init
             data-te-ripple-color="light"
           >
-            <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/033.jpg" className="w-full" alt="Louvre" />
-            <a href="#!">
+            <img src="/jyba_casamento.jpg" width={400} height={400} alt="Louvre" />
+            <a href="/produtos/fotografia">
               <div
                 className="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-[hsl(0,0%,98.4%,0.2)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"
               />
@@ -51,7 +53,7 @@ export default function Feautures() {
         </div>
 
         <div className="w-full shrink-0 grow-0 basis-auto lg:w-6/12 lg:pr-6">
-          <h3 className="mb-4 text-2xl font-bold">Exhibition in Paris</h3>
+          <h3 className="mb-4 text-2xl font-bold">Fotografia de Eventos</h3>
           <div className="mb-4 flex items-center text-sm font-medium text-primary dark:text-primary-400">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -67,24 +69,27 @@ export default function Feautures() {
                 d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42"
               />
             </svg>
-            Art
+            <p>
+              Arte
+            </p>
           </div>
-          <p className="mb-6 text-sm text-neutral-500 dark:text-neutral-400">
-            Published <u>12.01.2022</u> by
-            <a href="#!">Anna Doe</a>
+          <p>
+            A fotografia de eventos é como um farol da nossa humanidade.
+            Ela registra os momentos mais íntimos e efêmeros da vida das pessoas,
+            revelando o verdadeiro espírito humano em sua forma mais pura.
           </p>
-          <p className="text-neutral-500 dark:text-neutral-300">
-            Duis sagittis, turpis in ullamcorper venenatis, ligula nibh porta
-            dui, sit amet rutrum enim massa in ante. Curabitur in justo at
-            lorem laoreet ultricies. Nunc ligula felis, sagittis eget nisi
-            vitae, sodales vestibulum purus. Vestibulum nibh ipsum, rhoncus
-            vel sagittis nec, placerat vel justo. Duis faucibus sapien eget
-            tortor finibus, a eleifend lectus dictum. Cras tempor convallis
-            magna id rhoncus. Suspendisse potenti. Nam mattis faucibus
-            imperdiet. Proin tempor lorem at neque tempus aliquet. Phasellus
-            at ex volutpat, varius arcu id, aliquam lectus. Vestibulum mattis
-            felis quis ex pharetra luctus. Etiam luctus sagittis massa, sed
-            iaculis est vehicula ut.
+          <br />
+          <p> Cada evento
+            é uma história a ser contada, uma narrativa da vida, e o fotógrafo é o
+            contador de histórias silencioso que capta a alegria, a emoção, a conexão
+            e até mesmo a vulnerabilidade dos seres humanos.
+          </p>
+          <br />
+          <p>
+            A fotografia de eventos é uma forma de arte que celebra a vida,
+            a diversidade, a cultura e a expressão humana.É um testemunho da nossa
+            humanidade, da nossa busca por momentos significativos e da
+            necessidade de compartilhar esses momentos com o mundo.
           </p>
         </div>
       </div>
