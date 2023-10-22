@@ -10,6 +10,7 @@ export default function ModalProfile() {
   useEffect(() => {
     if (user) {
       if (user.photoURL) {
+        console.log('sim');
         setImageUrl(user.photoURL);
       } else {
         setImageUrl('https://angelsaudiovisual.com/user.png');

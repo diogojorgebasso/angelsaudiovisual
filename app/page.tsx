@@ -13,10 +13,10 @@ export default function Page() {
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <div className="mt-12 lg:mt-0">
               <Script src="https://www.google.com/recaptcha/api.js" />
-              <h1 className="mb-12 text-5xl font-bold tracking-tight text-[hsl(218,81%,95%)] md:text-6xl xl:text-7xl">
-                Nós cuidamos <br /><span className="text-[hsl(218,81%,75%)]">de sua imagem.</span>
+              <h1 className="mb-12 text-5xl font-bold tracking-tight  md:text-6xl xl:text-7xl">
+                Nós cuidamos <br /><span className="tracking-tight">de sua imagem.</span>
               </h1>
-              <p className="text-lg text-[hsl(218,81%,95%)]">
+              <p className="text-lg ">
                 Seja Foto, Vídeo ou Drone, seu evento merece o melhor.<br />
                 Muuuito além da entrega rápida e profissional.
               </p>
