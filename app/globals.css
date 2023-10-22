@@ -3,17 +3,13 @@
 @tailwind utilities;
 
 .background-radial-gradient {
-  background-color: hsl(218, 41%, 15%);
-  background-image: radial-gradient(650px circle at 0% 0%,
-      hsl(320, 41%, 35%) 15%,
-      #660033 35%,
-      hsl(218, 41%, 20%) 75%,
-      hsl(218, 41%, 19%) 80%,
-      transparent 100%),
-    radial-gradient(1250px circle at 100% 100%,
-      hsl(218, 41%, 45%) 15%,
-      hsl(218, 41%, 30%) 35%,
-      hsl(218, 41%, 20%) 75%,
-      hsl(218, 41%, 19%) 80%,
-      transparent 100%);
+  background: hsla(330, 100%, 20%, 1);
+
+  background: linear-gradient(45deg, hsla(330, 100%, 20%, 1) 22%, hsla(39, 36%, 45%, 1) 100%);
+
+  background: -moz-linear-gradient(45deg, hsla(330, 100%, 20%, 1) 22%, hsla(39, 36%, 45%, 1) 100%);
+
+  background: -webkit-linear-gradient(45deg, hsla(330, 100%, 20%, 1) 22%, hsla(39, 36%, 45%, 1) 100%);
+
+  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#660033", endColorstr="#9E804A", GradientType=1);
 }

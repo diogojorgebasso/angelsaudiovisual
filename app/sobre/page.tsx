@@ -3,7 +3,7 @@ export default function Sobre() {
     <main>
       <section className="background-radial-gradient">
         <div className="h-full container mx-auto">
-          <div className=" grid h-screen  place-items-center">
+          <div className=" grid h-screen place-items-center">
             <h1 className="mb-12 text-5xl font-bold tracking-tight  md:text-6xl xl:text-9xl">
               Sobre o que é<br /><span className="tracking-tight text-pink">nosso trabalho?</span>
             </h1>

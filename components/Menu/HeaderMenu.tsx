@@ -6,6 +6,7 @@ import { useTheme } from 'next-themes';
 import ModalProfile from './ModalProfile';
 import LoginSubscribeButton from './LoginSubscribeButton';
 import { useAuthContext } from '@/context/AuthContext';
+import BellIcon from './BellIcon';
 
 export function HeaderMenu() {
   const { user } = useAuthContext();
@@ -32,7 +33,7 @@ export function HeaderMenu() {
 
   return (
     <>
-      <nav className="bg-gray-800 text-white p-4 flex justify-between items-center">
+      <header className="bg-gray-800 text-white p-4 flex justify-between items-center">
         {/*Mobile */}
         <div className="flex w-full flex-wrap items-center justify-between px-3">
           <button
@@ -86,42 +87,38 @@ export function HeaderMenu() {
                 <ul>
                   <li>
 
-                    <a href="#" data-te-dropdown-item-ref className="flex w-full items-center whitespace-nowrap bg-transparent py-3 px-4 text-sm font-normal text-neutral-700 transition duration-300 ease-in-out hover:bg-neutral-50 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600">Link 1</a>
+                    <a href="/produtos/foto-video" data-te-dropdown-item-ref className="flex w-full items-center whitespace-nowrap bg-transparent py-3 px-4 text-sm font-normal text-neutral-700 transition duration-300 ease-in-out hover:bg-neutral-50 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600">Foto e Vídeo</a>
                   </li>
                   <li>
-                    <a href="#" data-te-dropdown-item-ref className="flex w-full items-center whitespace-nowrap bg-transparent py-3 px-4 text-sm font-normal text-neutral-700 transition duration-300 ease-in-out hover:bg-neutral-50 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600">Link 2</a>
+                    <a href="/produtos/edicao-fotografia" data-te-dropdown-item-ref className="flex w-full items-center whitespace-nowrap bg-transparent py-3 px-4 text-sm font-normal text-neutral-700 transition duration-300 ease-in-out hover:bg-neutral-50 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600">Edição de Fotografia</a>
                   </li>
                   <li>
-                    <a href="#" data-te-dropdown-item-ref className="flex w-full items-center whitespace-nowrap bg-transparent py-3 px-4 text-sm font-normal text-neutral-700 transition duration-300 ease-in-out hover:bg-neutral-50 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600">Link 2</a>
+                    <a href="/produtos/edicao-video" data-te-dropdown-item-ref className="flex w-full items-center whitespace-nowrap bg-transparent py-3 px-4 text-sm font-normal text-neutral-700 transition duration-300 ease-in-out hover:bg-neutral-50 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600">Edição de Vídeo</a>
                   </li>
                   <li>
-                    <a href="#" data-te-dropdown-item-ref className="flex w-full items-center whitespace-nowrap bg-transparent py-3 px-4 text-sm font-normal text-neutral-700 transition duration-300 ease-in-out hover:bg-neutral-50 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600">Link 2</a>
+                    <a href="/produtos/servicos-aereos" data-te-dropdown-item-ref className="flex w-full items-center whitespace-nowrap bg-transparent py-3 px-4 text-sm font-normal text-neutral-700 transition duration-300 ease-in-out hover:bg-neutral-50 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600">Drone</a>
                   </li>
                   <li>
-                    <a href="#" data-te-dropdown-item-ref className="flex w-full items-center whitespace-nowrap bg-transparent py-3 px-4 text-sm font-normal text-neutral-700 transition duration-300 ease-in-out hover:bg-neutral-50 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600">Link 2</a>
+                    <a href="/produtos/pilulas-redes-sociais" data-te-dropdown-item-ref className="flex w-full items-center whitespace-nowrap bg-transparent py-3 px-4 text-sm font-normal text-neutral-700 transition duration-300 ease-in-out hover:bg-neutral-50 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600">Pílulas para redes sociais</a>
                   </li>
                   <li>
-                    <a href="#" data-te-dropdown-item-ref className="flex w-full items-center whitespace-nowrap bg-transparent py-3 px-4 text-sm font-normal text-neutral-700 transition duration-300 ease-in-out hover:bg-neutral-50 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600">Link 2</a>
+                    <a href="#" data-te-dropdown-item-ref className="flex w-full items-center whitespace-nowrap bg-transparent py-3 px-4 text-sm font-normal text-neutral-700 transition duration-300 ease-in-out hover:bg-neutral-50 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600">Mais opções</a>
                   </li>
-                  <li>
-                    <a href="#" data-te-dropdown-item-ref className="flex w-full items-center whitespace-nowrap bg-transparent py-3 px-4 text-sm font-normal text-neutral-700 transition duration-300 ease-in-out hover:bg-neutral-50 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600">Link 2</a>
-                  </li>
-
                 </ul>
               </div>
             </div>
-            <a href="#" className="text-lg">Clientes</a>
-            <a href="#" className="text-lg">Cobre nós</a>
+            <a href="/clientes" className="text-lg">Clientes</a>
+            <a href="/sobre" className="text-lg">Sobre nós</a>
 
           </div>
           <div className="flex">
             {/* Bell Icon */}
-
             <ThemeIcon />
+            <BellIcon />
             {user ? <ModalProfile /> : <LoginSubscribeButton />}
           </div>
         </div>
-      </nav>
+      </header>
     </>
   );
 }
