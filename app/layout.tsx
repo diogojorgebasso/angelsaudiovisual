@@ -1,5 +1,4 @@
 import React from 'react';
-
 //Next
 import { Inter } from 'next/font/google';
 import type { Metadata } from 'next';
