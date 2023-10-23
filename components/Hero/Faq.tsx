@@ -1,7 +1,7 @@
 export default function Faq() {
   return (
     <section>
-      <div className="w-full px-8 mx-auto mt-2 space-y-1 m-4 px-20">
+      <div className="container px-8 mx-auto mt-2 space-y-1 m-4 px-20">
         <h3 className="text-extrabold text-center text-4xl py-2">Perguntas Frequentas</h3>
         <details className="shadow-md rounded-lg">
           <summary className="font-semibold px-4 py-2 text-lg cursor-pointer">Quem contrata a Angels?</summary>
