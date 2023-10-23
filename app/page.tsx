@@ -20,7 +20,7 @@ export default function Page() {
         <div className="place-items-center grid absolute top-0 left-0 w-full h-full">
           <div>
             <Script rel="preconnect" src="https://www.google.com/recaptcha/api.js" />
-            <h1 className="mb-12 text-5xl text-white font-bold tracking-tight md:text-6xl xl:text-7xl text-center">
+            <h1 className="text-5xl text-white font-bold tracking-tight md:text-6xl xl:text-7xl text-center">
               Nós cuidamos <br />de sua imagem.
             </h1>
             <p className="text-lg pb-8 text-center text-white">
