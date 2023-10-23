@@ -3,9 +3,13 @@
 'use client';
 
 import { useTheme } from 'next-themes';
+import Link from 'next/link';
+
 import ModalProfile from './ModalProfile';
 import LoginSubscribeButton from './LoginSubscribeButton';
+
 import { useAuthContext } from '@/context/AuthContext';
+
 import BellIcon from './BellIcon';
 
 export function HeaderMenu() {
@@ -58,9 +62,9 @@ export function HeaderMenu() {
           {/*End Mobile */}
 
           <div className="relative flex items-center">
-            <a href="/">
+            <Link href="/">
               <img src="angels.png" width={40} height={56} alt="Logo" />
-            </a>
+            </Link>
           </div>
           <div className="flex items-center space-x-6">
             <div className="relative group">

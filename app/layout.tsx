@@ -6,7 +6,7 @@ import type { Metadata } from 'next';
 import { AuthContextProvider } from '@/context/AuthContext';
 import { DarkContext } from '@/context/DarkContext';
 
-//SEO
+//CSS
 import './globals.css';
 
 import { HeaderMenu } from '@/components/Menu/HeaderMenu';
