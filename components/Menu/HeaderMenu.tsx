@@ -63,7 +63,7 @@ export function HeaderMenu() {
 
           <div className="relative flex items-center">
             <Link href="/">
-              <img src="angels.png" width={40} height={56} alt="Logo" />
+              <img src="/logo_menu.jpg" width={40} height={49} alt="Logo" />
             </Link>
           </div>
           <div className="flex items-center space-x-6">

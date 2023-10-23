@@ -19,7 +19,7 @@ export default function Testimonials() {
                     as expectativas! Obrigado pela qualidade do serviço prestado.
                   </p>
                   <div className="flex items-center mt-4 space-x-4">
-                    <img loading="lazy" src="/clientes/dj_papitos.png" alt="Logo dos Djs Papitos" className="w-12 h-12 bg-center bg-cover rounded-full dark:bg-gray-500" />
+                    <img loading="lazy" width={48} height={48} src="/clientes/dj_papitos.jpg" alt="Foto de grupo dos Djs" className="bg-center bg-cover rounded-full dark:bg-gray-500" />
                     <div>
                       <p className="text-lg font-semibold">Leon</p>
                       <p className="text-sm ">Produtor dos DJ&#39;s Papitos</p>
@@ -33,7 +33,7 @@ export default function Testimonials() {
                     E claro indicamos a todos!
                   </p>
                   <div className="flex items-center mt-4 space-x-4">
-                    <img loading="lazy" src="/clientes/luiz_diego.webp" alt="Foto de perfil do Luiz Diego, organizador da Zap Festas" className="w-12 h-12 bg-center bg-cover rounded-full dark:bg-gray-500" />
+                    <img loading="lazy" width={48} height={48} src="/clientes/luiz_diego.webp" alt="Foto de perfil do Luiz Diego, organizador da Zap Festas" className="bg-center bg-cover rounded-full dark:bg-gray-500" />
                     <div>
                       <p className="text-lg font-semibold">Luiz Diego</p>
                       <p className="text-sm ">Produtor da Zap Eventos</p>
@@ -50,7 +50,7 @@ export default function Testimonials() {
                     até antes do previsto.
                   </p>
                   <div className="flex items-center mt-4 space-x-4">
-                    <img loading="lazy" src="/clientes/michelli_santos.jpg" alt="Foto de perfil da Michelli Santos, presidenta da Comissão de Engenharia Hídrica" className="w-12 h-12 bg-center bg-cover rounded-full dark:bg-gray-500" />
+                    <img loading="lazy" width={48} height={48} src="/clientes/michelli_santos.webp" alt="Foto de perfil da Michelli Santos, presidenta da Comissão de Engenharia Hídrica" className=" bg-center bg-cover rounded-full dark:bg-gray-500" />
                     <div>
                       <p className="text-lg font-semibold">Michelli Santos</p>
                       <p className="text-sm ">Presidenta da comissão de Engenharia Hídrica</p>
@@ -62,7 +62,7 @@ export default function Testimonials() {
                     E sou exigente, hein! 🤜
                   </p>
                   <div className="flex items-center mt-4 space-x-4">
-                    <img loading="lazy" src="/clientes/clayton_tenorio.png" alt="Imagem de Perfil do Clayton Tenório" className="w-12 h-12 bg-center bg-cover rounded-full dark:bg-gray-500" />
+                    <img loading="lazy" width={48} height={48} src="/clientes/clayton_tenorio.png" alt="Imagem de Perfil do Clayton Tenório" className="bg-center bg-cover rounded-full dark:bg-gray-500" />
                     <div>
                       <p className="text-lg font-semibold">Clayton Tenório</p>
                       <p className="text-sm ">Diretor Artístico do Especial Le Gal</p>
