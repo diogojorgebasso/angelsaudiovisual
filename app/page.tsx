@@ -15,6 +15,7 @@ export default function Page() {
       <section className="relative h-screen">
         <video controls muted loop className="absolute top-0 left-0 w-full h-full object-cover brightness-50" autoPlay>
           <source type="video/mp4" src="https://firebasestorage.googleapis.com/v0/b/angels-audiovisual.appspot.com/o/Youtube.mp4?alt=media&token=0e40eb4b-3f27-4f7b-bfb1-7d9196bc8cc8" />
+          <track src="/captacao_video_DJ_papitos.vtt" kind="captions" />
         </video>
         <div className="place-items-center grid absolute top-0 left-0 w-full h-full">
           <div>

@@ -225,7 +225,7 @@ export default function Footer() {
 
       {/*Copyright section*/}
       <div className=" p-6 text-center ">
-        © 2023 Todos os Direitos Reservados.Angels Audiovisual.
+        © 2023 Todos os Direitos Reservados. Angels Audiovisual.
       </div>
     </footer>
   );
