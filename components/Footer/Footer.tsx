@@ -79,22 +79,22 @@ export default function Footer() {
         <div className="grid-1 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {/* Tailwind Elements section */}
           <div className="">
-            <h6
+            <h4
               className="mb-4 flex items-center justify-center font-semibold uppercase md:justify-start"
             >
               Angels Audiovisual
-            </h6>
+            </h4>
             <p>
               Somos uma Produtora Audiovisual de Eventos Empresariais e Artísticos.
             </p>
           </div>
           {/* Products section */}
           <div>
-            <h6
+            <h4
               className="mb-4 flex justify-center font-semibold md:justify-start"
             >
               PROdutos
-            </h6>
+            </h4>
             <p className="mb-4">
               <a
                 href="/produtos/pacote-completo"
@@ -122,11 +122,11 @@ export default function Footer() {
           </div>
           {/* Useful links section */}
           <div className="">
-            <h6
+            <h4
               className="mb-4 flex justify-center font-semibold  md:justify-start"
             >
               Legal
-            </h6>
+            </h4>
             <p className="mb-4">
               <a
                 href="/legal/politica-privacidade"
@@ -154,11 +154,11 @@ export default function Footer() {
           </div>
           {/* Contact section */}
           <div>
-            <h6
+            <h4
               className="mb-4 flex justify-center font-semibold md:justify-start"
             >
               Contato
-            </h6>
+            </h4>
             <p className="mb-4 flex items-center justify-center md:justify-start">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

@@ -13,6 +13,7 @@ export default function FoundersNote() {
               src="/equipe/diogo-basso.jpg"
               alt="Imagem do Diogo Basso com uma câmera"
               className=" rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg"
+              loading="lazy"
             />
           </div>
           <div className=" shrink-0 grow-0 basis-auto lg:w-6/12 xl:w-8/12">
