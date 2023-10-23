@@ -19,7 +19,7 @@ export default function Page() {
         </video>
         <div className="place-items-center grid absolute top-0 left-0 w-full h-full">
           <div>
-            <Script src="https://www.google.com/recaptcha/api.js" />
+            <Script rel="preconnect" src="https://www.google.com/recaptcha/api.js" />
             <h1 className="mb-12 text-5xl text-white font-bold tracking-tight md:text-6xl xl:text-7xl text-center">
               Nós cuidamos <br />de sua imagem.
             </h1>
@@ -27,7 +27,7 @@ export default function Page() {
               Seja Foto, Vídeo ou Drone, seu evento merece o melhor.<br />
               Muito além da entrega rápida e profissional.<br />
             </p>
-            <div className="">
+            <div>
               <Link href="/produtos">
                 <button
                   type="button"
@@ -71,8 +71,8 @@ export default function Page() {
             </div>
           </div>
 
-          <div className="text-center">
-            <h2 className="mb-16 text-white text-3xl font-bold">
+          <div className="">
+            <h2 className="text-center mb-16 text-white text-3xl font-bold">
               Mais de 30 projetos entregues em 2023
             </h2>
 

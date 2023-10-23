@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-
-'use client';
+import Link from 'next/link';
 
 export default function Feautures() {
   return (
@@ -30,7 +29,7 @@ export default function Feautures() {
             emoção que a vida cotidiana esconde. Eles são os mágicos que
             transformam momentos simples em momentos extraordinários.
           </p>
-          <p className="">
+          <p>
             Este ao lado é nosso Aftermovie para uma atração dos Jogos da INATEL.
             <a className="underline" target="blank" rel="noopener noreferrer nofollow" href="https://www.youtube.com/@AngelsAudiovisual">No nosso canal do Youtube você encontra mais vídeos como esse.</a>
           </p>
@@ -45,11 +44,11 @@ export default function Feautures() {
             data-te-ripple-color="light"
           >
             <img src="/jyba_casamento.jpg" width={400} height={400} alt="Louvre" />
-            <a href="/produtos/fotografia">
+            <Link aria-label="Quero ver mais produtos de Fotografia de nossa empresa" href="/produtos/fotografia">
               <div
                 className="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-[hsl(0,0%,98.4%,0.2)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"
               />
-            </a>
+            </Link>
           </div>
         </div>
 
