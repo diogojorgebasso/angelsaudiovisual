@@ -87,29 +87,28 @@ export function HeaderMenu() {
               <div data-te-dropdown-menu-ref className="z-10 grid grid-cols-2 lg:grid-cols-4 gap-4 absolute hidden space-y-2 bg-white text-black mt-2 py-2 px-4 group-hover:block">
                 <ul>
                   <li>
-
-                    <a href="/produtos/foto-video" data-te-dropdown-item-ref className="flex w-full items-center whitespace-nowrap bg-transparent py-3 px-4 text-sm font-normal text-neutral-700 transition duration-300 ease-in-out hover:bg-neutral-50 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600">Foto e Vídeo</a>
+                    <a aria-label="link para página dos nossos serviços de Fotografia e Vídeo, pacote completo" href="/produtos/foto-video" data-te-dropdown-item-ref className="flex w-full items-center whitespace-nowrap bg-transparent py-3 px-4 text-sm font-normal text-neutral-700 transition duration-300 ease-in-out hover:bg-neutral-50 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600">Foto e Vídeo</a>
                   </li>
                   <li>
-                    <a href="/produtos/edicao-fotografia" data-te-dropdown-item-ref className="flex w-full items-center whitespace-nowrap bg-transparent py-3 px-4 text-sm font-normal text-neutral-700 transition duration-300 ease-in-out hover:bg-neutral-50 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600">Edição de Fotografia</a>
+                    <a aria-label="link para página dos nossos serviços de Edição Fotografia" href="/produtos/edicao-fotografia" data-te-dropdown-item-ref className="flex w-full items-center whitespace-nowrap bg-transparent py-3 px-4 text-sm font-normal text-neutral-700 transition duration-300 ease-in-out hover:bg-neutral-50 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600">Edição de Fotografia</a>
                   </li>
                   <li>
-                    <a href="/produtos/edicao-video" data-te-dropdown-item-ref className="flex w-full items-center whitespace-nowrap bg-transparent py-3 px-4 text-sm font-normal text-neutral-700 transition duration-300 ease-in-out hover:bg-neutral-50 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600">Edição de Vídeo</a>
+                    <a aria-label="link para página dos nossos serviços de Edição de Vídeo" href="/produtos/edicao-video" data-te-dropdown-item-ref className="flex w-full items-center whitespace-nowrap bg-transparent py-3 px-4 text-sm font-normal text-neutral-700 transition duration-300 ease-in-out hover:bg-neutral-50 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600">Edição de Vídeo</a>
                   </li>
                   <li>
-                    <a href="/produtos/servicos-aereos" data-te-dropdown-item-ref className="flex w-full items-center whitespace-nowrap bg-transparent py-3 px-4 text-sm font-normal text-neutral-700 transition duration-300 ease-in-out hover:bg-neutral-50 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600">Drone</a>
+                    <a aria-label="link para página dos nossos serviços aéreos" href="/produtos/servicos-aereos" data-te-dropdown-item-ref className="flex w-full items-center whitespace-nowrap bg-transparent py-3 px-4 text-sm font-normal text-neutral-700 transition duration-300 ease-in-out hover:bg-neutral-50 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600">Drone</a>
                   </li>
                   <li>
-                    <a href="/produtos/pilulas-redes-sociais" data-te-dropdown-item-ref className="flex w-full items-center whitespace-nowrap bg-transparent py-3 px-4 text-sm font-normal text-neutral-700 transition duration-300 ease-in-out hover:bg-neutral-50 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600">Pílulas para redes sociais</a>
+                    <a aria-label="link para página dos nossos serviços de Pílulas para Redes Sociais" href="/produtos/pilulas-redes-sociais" data-te-dropdown-item-ref className="flex w-full items-center whitespace-nowrap bg-transparent py-3 px-4 text-sm font-normal text-neutral-700 transition duration-300 ease-in-out hover:bg-neutral-50 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600">Pílulas para redes sociais</a>
                   </li>
                   <li>
-                    <a href="/produtos" data-te-dropdown-item-ref className="flex w-full items-center whitespace-nowrap bg-transparent py-3 px-4 text-sm font-normal text-neutral-700 transition duration-300 ease-in-out hover:bg-neutral-50 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600">Mais opções</a>
+                    <a aria-label="Saiba mais sobre todos os nossos produtos" href="/produtos" data-te-dropdown-item-ref className="flex w-full items-center whitespace-nowrap bg-transparent py-3 px-4 text-sm font-normal text-neutral-700 transition duration-300 ease-in-out hover:bg-neutral-50 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600">Mais opções</a>
                   </li>
                 </ul>
               </div>
             </div>
-            <a href="/clientes">Clientes</a>
-            <a href="/sobre">Sobre nós</a>
+            <a aria-label="link para página dos clientes que já atendemeos" href="/clientes">Clientes</a>
+            <a aria-label="link para página sobre nós: equipe, missão, visão e valores" href="/sobre">Sobre nós</a>
 
           </div>
           <div className="flex">
