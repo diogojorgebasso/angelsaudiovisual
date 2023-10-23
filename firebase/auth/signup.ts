@@ -7,7 +7,7 @@ const auth = getAuth(firebaseApp);
 export default async function signUp(email: string, name: string) {
   try {
     const response: any = await sendSignInLinkToEmail(auth, email, { url: 'http://angelsaudiovisual.com/cadastrar', handleCodeInApp: true });
-    return await addData('users', response.user.uid, { name, email });
+    return await addData('clientes', response.user.uid, { name, email });
   } catch (error) {
     return ({ error });
   }
