@@ -12,7 +12,7 @@ import './globals.css';
 import { HeaderMenu } from '@/components/Menu/HeaderMenu';
 import Footer from '@/components/Footer/Footer';
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ['latin'], display: 'swap' });
 
 export const metadata: Metadata = {
   title: 'Angels Audiovisual - Produtora Audiovisual',
