@@ -15,7 +15,7 @@ import Footer from '@/components/Footer/Footer';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Angels Audiovisual - Produtora de Itajubá',
+  title: 'Angels Audiovisual - Produtora Audiovisual',
   description:
     'Produtora audiovisual para eventos universitários e empresariais. De Minas Gerais para o Brasil.',
   applicationName: 'Angels Audiovisual',
