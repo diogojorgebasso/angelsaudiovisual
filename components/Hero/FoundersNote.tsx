@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function FoundersNote() {
   return (
-    <section className="mb-32">
+    <section className="mb-20 container mx-auto">
       <div
         className="block rounded-lg shadow-lg dark:bg-neutral-700"
       >
@@ -12,10 +12,10 @@ export default function FoundersNote() {
             <img
               src="/equipe/diogo-basso.jpg"
               alt="Imagem do Diogo Basso com uma câmera"
-              className="w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg"
+              className=" rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg"
             />
           </div>
-          <div className="w-full shrink-0 grow-0 basis-auto lg:w-6/12 xl:w-8/12">
+          <div className=" shrink-0 grow-0 basis-auto lg:w-6/12 xl:w-8/12">
             <div className="px-6 py-12 md:px-12">
               <h2 className="mb-4 text-2xl font-bold">
                 Nota do Fundador

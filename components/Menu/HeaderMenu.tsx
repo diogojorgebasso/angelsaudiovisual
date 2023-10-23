@@ -64,9 +64,10 @@ export function HeaderMenu() {
           </div>
           <div className="flex items-center space-x-6">
             <div className="relative group">
-              <a href="/produtos" type="button" className=" flex text-lg">Produtos
+              <a href="/produtos" type="button" className=" flex">Produtos
                 <span className="w-2 mt-2 ">
                   <svg
+                    className="px-1"
                     aria-hidden="true"
                     focusable="false"
                     data-prefix="fas"
@@ -102,7 +103,7 @@ export function HeaderMenu() {
                     <a href="/produtos/pilulas-redes-sociais" data-te-dropdown-item-ref className="flex w-full items-center whitespace-nowrap bg-transparent py-3 px-4 text-sm font-normal text-neutral-700 transition duration-300 ease-in-out hover:bg-neutral-50 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600">Pílulas para redes sociais</a>
                   </li>
                   <li>
-                    <a href="#" data-te-dropdown-item-ref className="flex w-full items-center whitespace-nowrap bg-transparent py-3 px-4 text-sm font-normal text-neutral-700 transition duration-300 ease-in-out hover:bg-neutral-50 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600">Mais opções</a>
+                    <a href="/produtos" data-te-dropdown-item-ref className="flex w-full items-center whitespace-nowrap bg-transparent py-3 px-4 text-sm font-normal text-neutral-700 transition duration-300 ease-in-out hover:bg-neutral-50 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600">Mais opções</a>
                   </li>
                 </ul>
               </div>

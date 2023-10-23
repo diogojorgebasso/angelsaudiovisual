@@ -2,14 +2,14 @@
 
 'use client';
 
-import ReactPlayer from 'react-player/lazy';
-
 export default function Feautures() {
   return (
     <section className="mt-20 container mx-auto">
       <div className="mb-16 flex flex-wrap">
         <div className="mb-6 mt-6 w-full shrink-0 grow-0 basis-auto lg:mb-0 lg:w-6/12 lg:pr-6">
-          <ReactPlayer url="https://www.youtube.com/embed/uLIKdnaLeUI" />
+          <video controls muted loop className=" w-full h-full object-cover brightness-50" autoPlay>
+            <source type="video/mp4" src="https://firebasestorage.googleapis.com/v0/b/angels-audiovisual.appspot.com/o/Youtube.mp4?alt=media&token=0e40eb4b-3f27-4f7b-bfb1-7d9196bc8cc8" />
+          </video>
         </div>
 
         <div className="w-full shrink-0 grow-0 basis-auto lg:w-6/12 lg:pl-6">
