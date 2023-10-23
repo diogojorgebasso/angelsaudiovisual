@@ -28,7 +28,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-BR">
+    <html lang="pt-BR" className={`${inter.className}`}>
       <head>
         <link rel="shortcut icon" href="/favicon.svg" sizes="any" />
         <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
