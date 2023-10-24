@@ -43,8 +43,8 @@ export default function FoundersNote() {
               </p>
               <p className="mb-6  ">
                 As portas estão abertas para você também.
-                <Link aria-label="Redirecionamento Página de produtos" className="underline" href="/produtos">
-                  Vamos conversar?
+                <Link aria-label="Quer conferir nossos produtos?" className="underline" href="/produtos">
+                  Quer conferir nossos produtos?
                 </Link>
               </p>
             </div>
