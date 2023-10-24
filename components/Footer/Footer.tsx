@@ -75,16 +75,19 @@ export default function Footer() {
       </div>
 
       <div className="mx-6 py-10 text-center md:text-left">
-        <div className="grid-1 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           {/* Tailwind Elements section */}
-          <h3
-            className="mb-4 flex items-center justify-center font-semibold uppercase md:justify-start"
-          >
-            Angels Audiovisual
-          </h3>
-          <p>
-            Somos uma Produtora Audiovisual de Eventos Empresariais e Artísticos.
-          </p>
+          <div>
+            <h3
+              className="mb-4 items-center justify-center font-semibold uppercase md:justify-start"
+            >
+              Angels Audiovisual
+            </h3>
+            <p>
+              Somos uma Produtora Audiovisual de Eventos Empresariais e Artísticos.
+            </p>
+          </div>
+
           {/* Products section */}
           <div>
             <h4
