@@ -93,7 +93,6 @@ export default function Feautures() {
           </p>
         </div>
       </div>
-
     </section>
   );
 }

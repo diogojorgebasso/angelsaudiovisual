@@ -117,8 +117,9 @@ export function HeaderMenu() {
           </div>
           <div className="flex">
             {/* Bell Icon */}
-            <ThemeIcon />
             <BellIcon />
+
+            <ThemeIcon />
             {user ? <ModalProfile /> : <LoginSubscribeButton />}
           </div>
         </div>
