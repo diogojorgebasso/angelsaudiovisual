@@ -17,7 +17,7 @@ export default function Newsletter() {
   };
 
   return (
-    <section className="mb-32 text-center lg:text-left">
+    <section id="newsletter" className="mb-32 text-center lg:text-left">
       <div className="flex flex-wrap justify-center">
         <div className="w-full shrink-0 grow-0 basis-auto px-3 md:w-10/12 lg:w-11/12 xl:w-10/12">
           <div className="grid items-center gap-x-6 lg:grid-cols-2">

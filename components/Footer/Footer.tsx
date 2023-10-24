@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Link from 'next/link';
 export default function Footer() {
   return (
 
@@ -96,60 +96,60 @@ export default function Footer() {
               PROdutos
             </h4>
             <p className="mb-4">
-              <a
+              <Link
                 href="/produtos/pacote-completo"
               >Pacote Completo
-              </a>
+              </Link>
             </p>
             <p className="mb-4">
-              <a
+              <Link
                 href="/produtos/editor-redes-sociais"
               >Pílulas para as Redes Sociais
-              </a>
+              </Link>
             </p>
             <p className="mb-4">
-              <a
+              <Link
                 href="/produtos/sericos-aereos"
               >Serviços Aéreos
-              </a>
+              </Link>
             </p>
             <p>
-              <a
+              <Link
                 href="/produtos/edicao-fotografia"
               >Edição de Fotografia
-              </a>
+              </Link>
             </p>
           </div>
           {/* Useful links section */}
-          <div className="">
+          <div>
             <h4
               className="mb-4 flex justify-center font-semibold  md:justify-start"
             >
               Legal
             </h4>
             <p className="mb-4">
-              <a
+              <Link
                 href="/legal/politica-privacidade"
               >Política de Privacidade
-              </a>
+              </Link>
             </p>
             <p className="mb-4">
-              <a
+              <Link
                 href="/legal/termos-servico"
               >Termos de Serviço
-              </a>
+              </Link>
             </p>
             <p className="mb-4">
-              <a
+              <Link
                 href="/contato"
               >Contato
-              </a>
+              </Link>
             </p>
             <p>
-              <a
+              <Link
                 href="/perfil"
               >Meu Peril
-              </a>
+              </Link>
             </p>
           </div>
           {/* Contact section */}
