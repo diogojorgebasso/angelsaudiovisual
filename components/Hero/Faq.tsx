@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function Faq() {
   return (
     <section>
@@ -7,12 +9,12 @@ export default function Faq() {
           <summary className="font-semibold px-4 py-2 text-lg cursor-pointer">Quem contrata a Angels?</summary>
           <div>
             <p className="leading-6 px-10 py-2 transition-shadow">
-              Gostamos de ter Foco. Fazemos<b>Eventos Empresariais e Universitários</b>.
+              Gostamos de ter Foco. Fazemos <b>Eventos Empresariais e Universitários</b>.
             </p>
             <p className="leading-6 px-10 py-2 transition-shadow">
               Dessa forma, nossa clientela principal engloba esses segmentos. <br />
               Entretanto, em qualquer evento, temos outros colaboradores-chave: Patrocinadores,
-              Influenciadores e Atrações.<br />Eles também são parte integrante de nossa clientela.
+              Influenciadores e Atrações.Eles também são parte integrante de nossa clientela.
             </p>
           </div>
         </details>
@@ -33,7 +35,7 @@ export default function Faq() {
           <summary className="font-semibold px-4 py-2  text-lg cursor-pointer">Como faço para fazer um orçamento?</summary>
           <div>
             <p className="leading-6 px-10 py-2">
-              <a className="underline text-blue-300" href="/contato">Acesse a página de</a> e nos mande sua demanda.
+              <Link className="underline text-blue-300" href="/produtos">Acesse a página de Produtos</Link> e nos mande sua demanda.
             </p>
           </div>
         </details>

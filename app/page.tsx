@@ -71,7 +71,7 @@ export default function Page() {
             </div>
           </div>
 
-          <div className="">
+          <div>
             <h2 className="text-center mb-16 text-white text-3xl font-bold">
               Mais de 30 projetos entregues em 2023
             </h2>

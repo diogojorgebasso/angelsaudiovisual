@@ -12,6 +12,8 @@ export default function FoundersNote() {
             <img
               src="/equipe/diogo-basso.jpg"
               alt="Imagem do Diogo Basso com uma câmera"
+              height="auto"
+              width="auto"
               className=" rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg"
               loading="lazy"
             />
@@ -38,10 +40,10 @@ export default function FoundersNote() {
               <p>
                 <b>Por isso criamos a Angels. Para te ajudar a se posicionar melhor.</b>
               </p>
-              <p className="mb-6  ">Neste ano levantamos mais de 30 projetos para alavancar a presença
+              <p className="mb-6">Neste ano levantamos mais de 30 projetos para alavancar a presença
                 audiovisual das Empresas. Mais de duas milhões de impressões nas empresas.
               </p>
-              <p className="mb-6  ">
+              <p className="mb-6">
                 As portas estão abertas para você também.
                 <Link aria-label="Quer conferir nossos produtos?" className="underline" href="/produtos">
                   Quer conferir nossos produtos?

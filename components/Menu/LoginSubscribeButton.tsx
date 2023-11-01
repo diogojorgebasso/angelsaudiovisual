@@ -9,7 +9,7 @@ export default function ModalProfile() {
         </button>
       </Link>
       <Link href="/cadastrar">
-        <button type="button" className="bg-blue-800 text-white mx-2 px-4 py-2 rounded-full">
+        <button type="button" className="bg-yellow-600 text-white mx-2 px-4 py-2 rounded-full">
           Cadastrar
         </button>
       </Link>
