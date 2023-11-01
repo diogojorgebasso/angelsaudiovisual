@@ -37,7 +37,7 @@ export function HeaderMenu() {
 
   return (
     <>
-      <header className="p-4 flex justify-between items-center">
+      <header className="p-4 flex border justify-between items-center">
         {/*Mobile */}
         <div className="flex w-full flex-wrap items-center justify-between px-3">
           <button
