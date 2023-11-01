@@ -12,15 +12,15 @@ export default function Page() {
         <div className="row">
           <div className="col-sm-8 offset-sm-2  text-center -mt-52">
             <div className="relative ">
-              <h1 className="relative text-9xl tracking-tighter-less text-shadow font-sans font-bold">
+              <h1 className="relative text-9xl tracking-tighter-less text-shadow font-bold">
                 <span>4</span><span>0</span><span>4</span>
               </h1>
-              <span className="absolute  top-0   -ml-12   font-semibold">Oops!</span>
+              <span className="absolute top-0 -ml-12 font-semibold">Oops!</span>
             </div>
             <h5 className=" font-semibold -mr-10 -mt-3">Página não encontrada</h5>
             <p className="mt-2 mb-6">Nós pedimos desculpas. Clique no botão abaixo para voltar à página inicial:</p>
             <Link
-              className="bg-green-400 text-black  px-5 py-3 text-sm shadow-sm font-medium tracking-wider  rounded-full hover:shadow-lg"
+              className="bg-green-400 text-black  px-5 py-3 text-sm shadow-sm font-medium tracking-wider rounded-full hover:shadow-lg"
               href="/"
             >
               Voltar para Home
