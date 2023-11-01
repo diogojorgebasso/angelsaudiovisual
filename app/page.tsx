@@ -20,7 +20,7 @@ export default function Page() {
         <div className="place-items-center grid absolute top-0 left-0 w-full h-full">
           <div>
             <Script rel="preconnect" src="https://www.google.com/recaptcha/api.js" />
-            <h1 className="text-5xl text-white font-bold tracking-tight md:text-6xl xl:text-7xl text-center">
+            <h1 className="text-5xl text-white font-bold tracking-tight md:text-4xl xl:text-7xl text-center">
               Nós cuidamos <br />de sua imagem.
             </h1>
             <p className="text-lg pb-8 text-center text-white">
@@ -38,9 +38,9 @@ export default function Page() {
             </div>
 
             <div className="flex py-4">
-              <img src="/clientes/gustavo-hermeto.jpeg" height={16} width={32} alt="Gustavo Hermeto, atual presidente do DA" className="rounded-full my-2" />
-              <img src="/clientes/giovanna-leone.jpeg" height={16} width={32} alt="Giovanna Leone, atual presidente do Albatroz" className="  -mx-2 rounded-full my-2" />
-              <img src="/clientes/raquel-beyoha.jpeg" height={16} width={32} alt="Raquel Beyoha, atual presidente do EPA" className="z-10 -mx-2 rounded-full my-2" />
+              <img src="/clientes/gustavo-hermeto.webp" height={32} width={32} alt="Gustavo Hermeto, atual presidente do DA" className="rounded-full my-2" />
+              <img src="/clientes/giovanna-leone.webp" height={32} width={32} alt="Giovanna Leone, atual presidente do Albatroz" className="  -mx-2 rounded-full my-2" />
+              <img src="/clientes/raquel-beyoha.webp" height={32} width={32} alt="Raquel Beyoha, atual presidente do EPA" className="z-10 -mx-2 rounded-full my-2" />
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="white" className="z-0 -mx-2 w-8 h-8 my-2">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
               </svg>

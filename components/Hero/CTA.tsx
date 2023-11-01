@@ -5,7 +5,7 @@ export default function CTA() {
   return (
     <section className="mb-32">
       <div
-        className="relative overflow-hidden bg-cover bg-no-repeat bg-[50%] bg-[url('/backgroundErrorImage.webp')] h-[500px]"
+        className="relative overflow-hidden bg-cover bg-no-repeat bg-[50%] bg-[url('/Dj-wbeatz.webp')] h-[500px]"
       >
         <div
           className="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-[hsla(0,0%,0%,0.75)] bg-fixed"

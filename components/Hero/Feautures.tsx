@@ -6,30 +6,31 @@ export default function Feautures() {
     <section className="mt-20 container mx-auto">
       <div className="mb-16 flex flex-wrap">
         <div className="mb-6 mt-6 w-full shrink-0 grow-0 basis-auto lg:mb-0 lg:w-6/12 lg:pr-6">
-          <video className=" w-full h-full object-cover">
+          <video controls className="w-full h-full object-cover">
             <source type="video/mp4" src="https://storage.googleapis.com/angels-audiovisual.appspot.com/Main_1.mp4" />
             <track src="/captacao_video_DJ_papitos.vtt" kind="captions" srcLang="pt-BR" />
           </video>
         </div>
 
         <div className="w-full shrink-0 grow-0 basis-auto lg:w-6/12 lg:pl-6">
-          <h3 className="mb-4 text-2xl font-bold">Vídeos</h3>
-          <div className="mb-4 flex items-center text-sm font-medium text-danger dark:text-danger-500">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-              <path d="M2 15.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v13.5zM8 4.41c1.387-1.425 4.854 1.07 0 4.277C3.146 5.48 6.613 2.986 8 4.412z" />
-            </svg>
-            <p className="ml-2">
-              Artísticos
-            </p>
+          <div className="flex justify-between">
+            <h3 className="mb-4 text-2xl font-bold">Vídeos</h3>
+            <div className="mb-4 flex items-center text-sm font-medium text-danger dark:text-danger-500">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M2 15.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v13.5zM8 4.41c1.387-1.425 4.854 1.07 0 4.277C3.146 5.48 6.613 2.986 8 4.412z" />
+              </svg>
+              <p className="ml-2">
+                Artísticos
+              </p>
+            </div>
           </div>
-          <p className=" mb-6 ">
-            Uma produtora de vídeos artísticos é como um coletivo de sonhadores
-            e contadores de histórias. Nessa pequena mas apaixonada equipe,
+          <p className="text-lg mb-6 ">
+            Vídeos artísticos são Aftermovie de atr. Nessa pequena mas apaixonada equipe,
             você encontra pessoas com um olhar especial para a beleza e a
             emoção que a vida cotidiana esconde. Eles são os mágicos que
             transformam momentos simples em momentos extraordinários.
           </p>
-          <p>
+          <p className="text-lg">
             Este ao lado é nosso Aftermovie para uma atração dos Jogos da INATEL.
             <a className="underline" target="blank" rel="noopener noreferrer nofollow" href="https://www.youtube.com/@AngelsAudiovisual">No nosso canal do Youtube você encontra mais vídeos como esse.</a>
           </p>
@@ -43,10 +44,10 @@ export default function Feautures() {
             data-te-ripple-init
             data-te-ripple-color="light"
           >
-            <img src="/jyba_casamento.jpg" width={400} height={400} alt="Louvre" />
+            <img src="/jyba_casamento.jpg" width={400} height={400} alt="Foto de celebração de Casamento que aconteceu no Jybá" />
             <Link aria-label="Quero ver mais produtos de Fotografia de nossa empresa" href="/produtos/fotografia">
               <div
-                className="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-[hsl(0,0%,98.4%,0.2)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"
+                className="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden  opacity-0 transition duration-300 ease-in-out hover:opacity-100"
               />
             </Link>
           </div>
