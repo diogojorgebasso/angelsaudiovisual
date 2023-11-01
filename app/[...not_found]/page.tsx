@@ -20,7 +20,7 @@ export default function Page() {
             <h5 className=" font-semibold -mr-10 -mt-3">Página não encontrada</h5>
             <p className="mt-2 mb-6">Nós pedimos desculpas. Clique no botão abaixo para voltar à página inicial:</p>
             <Link
-              className="bg-green-400 text-black  px-5 py-3 text-sm shadow-sm font-medium tracking-wider rounded-full hover:shadow-lg"
+              className="bg-yellow-400 text-black  px-5 py-3 text-sm shadow-sm font-medium tracking-wider rounded-full hover:shadow-lg"
               href="/"
             >
               Voltar para Home

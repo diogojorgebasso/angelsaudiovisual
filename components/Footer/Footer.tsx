@@ -95,7 +95,7 @@ export default function Footer() {
             <h4
               className="mb-4 flex justify-center font-semibold md:justify-start"
             >
-              PROdutos
+              Produtos
             </h4>
             <p className="mb-4">
               <Link
@@ -150,7 +150,7 @@ export default function Footer() {
             <p>
               <Link
                 href="/perfil"
-              >Meu Peril
+              >Meu Perfil
               </Link>
             </p>
           </div>
