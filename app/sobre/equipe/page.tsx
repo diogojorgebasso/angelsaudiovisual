@@ -110,10 +110,10 @@ export default function Page() {
 
           {/*Geovanna Crepaldi */}
           <div
-            className="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700"
+            className="block rounded-lg bg-white shadow-md dark:bg-neutral-700"
           >
             <div className="relative overflow-hidden bg-cover bg-no-repeat">
-              <img alt="Imagem de perfil da Geovanna Crepaldi, Fotógrafa" src="/equipe/geovanna-crepaldi.JPG" className="w-full rounded-t-lg" />
+              <img alt="Imagem de perfil da Geovanna Crepaldi, Fotógrafa" src="/equipe/geovanna-crepaldi.JPG" height={400} width={400} className="w-full rounded-t-lg" />
               <a aria-label="Página específica sobre a Geovanna" target="blank" href="/sobre/geovanna-crepaldi">
                 <div className="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-fixed" />
               </a>
