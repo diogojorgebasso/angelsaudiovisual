@@ -11,8 +11,6 @@ import LoginSubscribeButton from './LoginSubscribeButton';
 
 import { useAuthContext } from '@/context/AuthContext';
 
-import BellIcon from './BellIcon';
-
 export function HeaderMenu() {
   const { user } = useAuthContext();
   const [isOpen, setIsOpen] = useState(false);
@@ -29,7 +27,7 @@ export function HeaderMenu() {
               </Link>
             </div>
             <div className="hidden md:block">
-              <div className="ml-10 flex items-baseline">
+              <div className="ml-10 flex items-baseline justify-between">
                 <div className="space-x-4">
                   <Link
                     href="/produtos"
@@ -59,15 +57,8 @@ export function HeaderMenu() {
                     Blog
                   </Link>
 
-                  <Link
-                    href="/parceiros"
-                    className="rounded-md px-3 py-2 text-sm font-medium hover:bg-gray-700 "
-                  >
-                    Parceiros
-                  </Link>
                 </div>
                 <div>
-                  <BellIcon />
                   {user ? <ModalProfile /> : <LoginSubscribeButton />}
                 </div>
 
@@ -133,38 +124,38 @@ export function HeaderMenu() {
         <div className="md:hidden" id="mobile-menu">
           <div ref={ref} className="space-y-1 px-2 pb-3 pt-2 sm:px-3">
             <Link
-              href="#"
-              className="block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-gray-700"
+              href="/produtos"
+              className=" rounded-md px-3 py-2 text-sm font-medium hover:bg-gray-400"
             >
-              Dashboard
+              Produtos
             </Link>
 
             <Link
-              href="#"
-              className="block rounded-md px-3 py-2 text-base font-medium hover:bg-gray-700 "
+              href="/clientes"
+              className="rounded-md px-3 py-2 text-sm font-medium  hover:bg-gray-700 "
             >
-              Team
+              Clientes
             </Link>
 
             <Link
-              href="#"
-              className="block rounded-md px-3 py-2 text-base font-medium hover:bg-gray-700 "
+              href="/sobre"
+              className="rounded-md px-3 py-2 text-sm font-medium hover:bg-gray-700 "
             >
-              Projects
+              Sobre nós
             </Link>
 
             <Link
-              href="#"
-              className="block rounded-md px-3 py-2 text-base font-medium hover:bg-gray-700 "
+              href="/blog"
+              className="rounded-md px-3 py-2 text-sm font-medium hover:bg-gray-700 "
             >
-              Calendar
+              Blog
             </Link>
 
             <Link
-              href="#"
-              className="block rounded-md px-3 py-2 text-base font-medium hover:bg-gray-700 "
+              href="/parceiros"
+              className="rounded-md px-3 py-2 text-sm font-medium hover:bg-gray-700 "
             >
-              Reports
+              Parceiros
             </Link>
           </div>
         </div>

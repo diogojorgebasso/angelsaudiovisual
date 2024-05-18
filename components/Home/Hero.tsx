@@ -11,13 +11,15 @@ export default function Hero() {
         autoPlay
         muted
         className="absolute inset-0 w-full h-full object-cover"
-        src="https://storage.googleapis.com/angels-audiovisual.appspot.com/Site.mp4" // https://storage.googleapis.com/angels-audiovisual.appspot.com/Site.mp4
-      />
+        src="https://storage.googleapis.com/angels-audiovisual.appspot.com/Site.mp4"
+      >
+        <track src="caption_Anitta.vtt" kind="captions" srcLang="pt-br" label="Descrição em Português Brasil" />
+      </video>
       <div className="absolute inset-0 bg-black opacity-50" />
       <div className="absolute inset-0 flex justify-center items-center">
         <div className="text-white text-center">
-          <h1 className="text-7xl font-bold mb-4">Levando o Universo do Cinema<br /> para seu Evento</h1>
-          <p className="text-lg">CONSTRUINDO PARA DURAR. FEITO POR SONHADORES.</p>
+          <h1 className="text-3xl font-bold mb-4 md:text-7xl">Levando o Universo do Cinema<br /> para seu Evento</h1>
+          <p className="text-sm md:text-lg ">CONSTRUINDO PARA DURAR. FEITO POR SONHADORES.</p>
           <div className="mt-8">
             <Link href="#servicos">
               <button type="button" className="bg-white text-black px-6 py-3 rounded-full font-bold text-lg">Quero transformar meu evento</button>
