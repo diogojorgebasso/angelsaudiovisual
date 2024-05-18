@@ -67,6 +67,7 @@ export function HeaderMenu() {
                   </Link>
                 </div>
                 <div>
+                  <BellIcon />
                   {user ? <ModalProfile /> : <LoginSubscribeButton />}
                 </div>
 

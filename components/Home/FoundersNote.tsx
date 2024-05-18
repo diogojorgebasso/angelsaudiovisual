@@ -32,8 +32,8 @@ export default function FoundersNote() {
               <p className="mb-6  ">
                 Cerca de 66% das empresas estão nos primeiros passos rumo à maturidade digital.
                 O que diferencia a sua empresa das outras? O seu Posicionamento no mercado.
-                E hoje, estar bem posicionado significa estar presente no mundo digital e audiovisual.
-                Com uma boa posição, você atrai mais clientes e aumenta o faturamento.
+                E hoje, estar bem posicionado significa estar presente no mundo digital
+                e audiovisual. Assim, você atrai mais clientes e aumenta o faturamento.
                 <b> aumentar o faturamento </b>.
               </p>
               <p>
