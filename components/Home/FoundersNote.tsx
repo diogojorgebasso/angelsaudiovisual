@@ -5,7 +5,7 @@ export default function FoundersNote() {
   return (
     <section className="mb-20 container mx-auto">
       <div
-        className="block rounded-lg shadow-lg dark:bg-neutral-700"
+        className="block rounded-lg shadow-lg"
       >
         <div className="flex flex-wrap items-center">
           <div className="hidden shrink-0 grow-0 basis-auto lg:flex lg:w-6/12 xl:w-4/12">
@@ -30,18 +30,18 @@ export default function FoundersNote() {
                 posicionamento
               </p>
               <p className="mb-6  ">
-                <a rel="noopener noreferrer" target="blank" href="https://portal.fgv.br/noticias/pesquisa-mostra-66-micro-e-pequenas-empresa-estao-niveis-iniciais-maturidade-digital">66% das empresas estão em estágios iniciais de maturidade digital. </a>
-                Sabe, então, o que diferencia a sua empresa de outras? A maneira como
-                você se posiciona
-                diante do mercado. E posicionamento hoje em dia se dá no digital e no audiovisual.
-                Bem posicionado, você consegue atrair mais clientes e
+                Cerca de 66% das empresas estão nos primeiros passos rumo à maturidade digital.
+                O que diferencia a sua empresa das outras? O seu Posicionamento no mercado.
+                E hoje, estar bem posicionado significa estar presente no mundo digital e audiovisual.
+                Com uma boa posição, você atrai mais clientes e aumenta o faturamento.
                 <b> aumentar o faturamento </b>.
               </p>
               <p>
-                <b>Por isso criamos a Angels. Para te ajudar a se posicionar melhor.</b>
+                <b>  Por isso, criamos a Angels. Para te ajudar a se posicionar melhor.</b>
               </p>
-              <p className="mb-6">Neste ano levantamos mais de 30 projetos para alavancar a presença
-                audiovisual das Empresas. Mais de duas milhões de impressões nas empresas.
+              <p className="mb-6">Em 2023 impulsionamos mais de 40 projetos para fortalecer a
+                presença audiovisual das empresas, alcançando mais de 2.3 milhões de impressões.
+
               </p>
               <p className="mb-6">
                 As portas estão abertas para você também.

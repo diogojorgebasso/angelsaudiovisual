@@ -6,8 +6,8 @@ export default function Feautures() {
     <section className="mt-20 container mx-auto">
       <div className="mb-16 flex flex-wrap">
         <div className="mb-6 mt-6 w-full shrink-0 grow-0 basis-auto lg:mb-0 lg:w-6/12 lg:pr-6">
-          <video controls className="w-full h-full object-cover">
-            <source type="video/mp4" src="https://firebasestorage.googleapis.com/v0/b/angels-audiovisual.appspot.com/o/Main_1.mp4" />
+          <video autoPlay muted controls className="w-full h-full object-cover">
+            {/*<source type="video/mp4" src="https://storage.googleapis.com/angels-audiovisual.appspot.com/Main_1.mp4" />*/}
             <track src="/captacao_video_DJ_papitos.vtt" kind="captions" srcLang="pt-BR" />
           </video>
         </div>
@@ -24,15 +24,10 @@ export default function Feautures() {
               </p>
             </div>
           </div>
-          <p className="text-lg mb-6 ">
-            Vídeos artísticos são Aftermovie de atr. Nessa pequena mas apaixonada equipe,
-            você encontra pessoas com um olhar especial para a beleza e a
-            emoção que a vida cotidiana esconde. Eles são os mágicos que
-            transformam momentos simples em momentos extraordinários.
-          </p>
+          <p className="text-lg mb-6 " />
           <p className="text-lg">
-            Este ao lado é nosso Aftermovie para uma atração dos Jogos da INATEL.
-            <a className="underline" target="blank" rel="noopener noreferrer nofollow" href="https://www.youtube.com/@AngelsAudiovisual">No nosso canal do Youtube você encontra mais vídeos como esse.</a>
+            Cortes de Direção do Show do Luan Santana na Expo 2024.
+            <a target="blank" href="/clientes">Na nossa página de vídeos você encontra mais material como este.</a>
           </p>
         </div>
       </div>
@@ -44,7 +39,7 @@ export default function Feautures() {
             data-te-ripple-init
             data-te-ripple-color="light"
           >
-            <img src="/jyba_casamento.jpg" width={400} height={400} alt="Foto de celebração de Casamento que aconteceu no Jybá" />
+            <img src="/Publico_correndo.webp" width={2047} height={1339} alt="Foto de celebração de Casamento que aconteceu no Jybá" />
             <Link aria-label="Quero ver mais produtos de Fotografia de nossa empresa" href="/produtos/fotografia">
               <div
                 className="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden  opacity-0 transition duration-300 ease-in-out hover:opacity-100"

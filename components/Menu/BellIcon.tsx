@@ -8,8 +8,7 @@ export default function BellIcon() {
         </svg>
       </div>
       <div className="z-10 items-center absolute border border-t-0 rounded-b-lg p-1 bg-white p-2 invisible group-hover:visible">
-        <a href="#newsletter" className="  py-2 block text-black hover:bg-grey-lighter">Newsletter</a>
-        <a href="#" className=" py-2 block text-black hover:bg-grey-lighter">Cadastro</a>
+        <a href="/newsletter" className="  py-2 block text-black hover:bg-grey-lighter">Newsletter</a>
       </div>
     </div>
   );

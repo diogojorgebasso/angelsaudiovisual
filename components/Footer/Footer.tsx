@@ -12,7 +12,7 @@ export default function Footer() {
         className="flex items-center justify-center border-b-2  p-6 dark:border-neutral-500 lg:justify-between"
       >
         <div className="mr-12 hidden lg:block">
-          <span>Nossas redes sociais:</span>
+          <span>Nossas redes sociais</span>
         </div>
         {/* Social network icons container */}
         <div className="flex justify-center">
@@ -111,7 +111,7 @@ export default function Footer() {
             </p>
             <p className="mb-4">
               <Link
-                href="/produtos/sericos-aereos"
+                href="/produtos/servicos-aereos"
               >Serviços Aéreos
               </Link>
             </p>
@@ -191,8 +191,8 @@ export default function Footer() {
                   d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z"
                 />
               </svg>
-              <a target="blank" href="mailto:email@example.com">
-                diogo@angelsaudiovisual.com
+              <a target="blank" href="mailto:hello@angelsaudiovisual.com.br">
+                hello@angelsaudiovisual.com.br
               </a>
             </p>
             <p className="mb-4 flex items-center justify-center md:justify-start">
@@ -230,7 +230,7 @@ export default function Footer() {
 
       {/*Copyright section*/}
       <div className=" p-6 text-center ">
-        © 2023 Todos os Direitos Reservados. Angels Audiovisual.
+        © 2024 Todos os Direitos Reservados. Angels Audiovisual.
       </div>
     </footer>
   );
