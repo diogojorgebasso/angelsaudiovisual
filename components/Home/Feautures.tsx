@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Feautures() {
   return (
@@ -7,7 +8,7 @@ export default function Feautures() {
       <div className="mb-16 flex flex-wrap">
         <div className="mb-6 mt-6 w-full shrink-0 grow-0 basis-auto lg:mb-0 lg:w-6/12 lg:pr-6">
           <video autoPlay muted controls className="w-full h-full object-cover">
-            {/*<source type="video/mp4" src="https://storage.googleapis.com/angels-audiovisual.appspot.com/Main_1.mp4" />*/}
+            <source type="video/mp4" src="https://storage.googleapis.com/angels-audiovisual.appspot.com/Main_1.mp4" />
             <track src="/captacao_video_DJ_papitos.vtt" kind="captions" srcLang="pt-BR" />
           </video>
         </div>
@@ -15,7 +16,7 @@ export default function Feautures() {
         <div className="w-full shrink-0 grow-0 basis-auto lg:w-6/12 lg:pl-6">
           <div className="flex justify-between">
             <h3 className="mb-4 text-2xl font-bold">Vídeos</h3>
-            <div className="mb-4 flex items-center text-sm font-medium text-danger dark:text-danger-500">
+            <div className="mb-4 flex items-center text-sm font-medium">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                 <path d="M2 15.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v13.5zM8 4.41c1.387-1.425 4.854 1.07 0 4.277C3.146 5.48 6.613 2.986 8 4.412z" />
               </svg>
@@ -24,28 +25,22 @@ export default function Feautures() {
               </p>
             </div>
           </div>
-          <p className="text-lg mb-6 " />
           <p className="text-lg">
             Cortes de Direção do Show do Luan Santana na Expo 2024.
-            <a target="blank" href="/clientes">Na nossa página de vídeos você encontra mais material como este.</a>
+            Na nossa página de <a target="blank" className="underline" href="/produtos"> Produtos</a> você encontra mais vídeos como este.
           </p>
         </div>
       </div>
 
       <div className="mb-16 flex flex-wrap lg:flex-row-reverse">
-        <div className="mb-6 shrink-0 grow-0 basis-auto lg:mb-0 lg:w-6/12 lg:pl-6">
-          <div
-            className="ripple relative overflow-hidden rounded-lg bg-cover bg-[50%] bg-no-repeat shadow-lg dark:shadow-black/20"
-            data-te-ripple-init
-            data-te-ripple-color="light"
-          >
-            <img src="/Publico_correndo.webp" width={2047} height={1339} alt="Foto de celebração de Casamento que aconteceu no Jybá" />
-            <Link aria-label="Quero ver mais produtos de Fotografia de nossa empresa" href="/produtos/fotografia">
-              <div
-                className="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden  opacity-0 transition duration-300 ease-in-out hover:opacity-100"
-              />
-            </Link>
-          </div>
+        <div className="mb-6 mt-6 relative shrink-0 grow-0 basis-auto lg:mb-0 lg:w-6/12 lg:pr-6">
+          <Image
+            fill
+            src="/Publico_correndo.webp"
+            objectFit="cover"
+            quality={75}
+            alt="Menina correndo para pegar o prêmio. Evento privado em BH."
+          />
         </div>
 
         <div className="w-full shrink-0 grow-0 basis-auto lg:w-6/12 lg:pr-6">

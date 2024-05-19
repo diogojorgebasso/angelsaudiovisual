@@ -14,15 +14,16 @@ export default function Testimonials() {
             <div className="grid gap-4 md:grid-cols-2">
               <div className="grid content-center gap-4">
                 <div className="p-6 rounded shadow-md dark:bg-gray-900">
-                  <p>É gratificante ver o quão bom é o serviço prestado e a
-                    ótima qualidade de entrega! Com certeza supera sempre
-                    as expectativas! Obrigado pela qualidade do serviço prestado.
+                  <p>Eles captaram a essência do nosso evento e
+                    fizeram uma entrega mais que à altura, com 1000 fotos
+                    maravilhosas, além de um curta metragem de 8 minutos
+                    com tudo o que aconteceu no evento!
                   </p>
                   <div className="flex items-center mt-4 space-x-4">
-                    <img loading="lazy" width={48} height={48} src="/clientes/dj_papitos.jpg" alt="Foto de grupo dos Djs" className="bg-center bg-cover rounded-full dark:bg-gray-500" />
+                    <img loading="lazy" width={48} height={48} src="/clientes/luana_brandao.webp" alt="Luana Brandão, Diretora de Comunicação do Núcleo Sul" className="bg-center bg-cover rounded-full dark:bg-gray-500" />
                     <div>
-                      <p className="text-lg font-semibold">Leon</p>
-                      <p className="text-sm ">Produtor dos DJ&#39;s Papitos</p>
+                      <p className="text-lg font-semibold">Luana Brandão</p>
+                      <p className="text-sm ">Diretora de Comunicação do Núcleo Sul</p>
                     </div>
                   </div>
                 </div>
@@ -61,7 +62,7 @@ export default function Testimonials() {
                     <img loading="lazy" width={48} height={48} src="/clientes/clayton_tenorio.png" alt="Imagem de Perfil do Clayton Tenório" className="bg-center bg-cover rounded-full dark:bg-gray-500" />
                     <div>
                       <p className="text-lg font-semibold">Clayton Tenório</p>
-                      <p className="text-sm ">Diretor Artístico do Especial Le Gal</p>
+                      <p className="text-sm ">Diretor Artístico do Especial de tributo à Gal Costa</p>
                     </div>
                   </div>
                 </div>
