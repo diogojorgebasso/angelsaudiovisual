@@ -16,7 +16,7 @@
     "storybook:build": "storybook build"
   },
   "dependencies": {
-    "@headlessui/react": "^2.0.3",
+    "@headlessui/react": "^2.0.4",
     "firebase": "^10.4.0",
     "firebase-tools": "^13.8.1",
     "next": "^13.5.6",

@@ -16,7 +16,7 @@ const inter = Montserrat({ subsets: ['latin'], display: 'swap' });
 export const metadata: Metadata = {
   title: 'Angels Audiovisual',
   description:
-    'Produtora audiovisual para eventos universitários e empresariais. De Minas Gerais para o Brasil.',
+    'Produtora audiovisual para eventos Artísticos, corporativos e Universitários. ',
   applicationName: 'Angels Audiovisual',
 
 };
@@ -43,7 +43,7 @@ export default function RootLayout({
           content="minimum-scale=1, initial-scale=1, width=device-width,"
         />
       </head>
-      <body className={`${inter.className} text-gray-100 background-radial-gradient`}>
+      <body className={`${inter.className} bg-primary text-gray-100`}>
         <AuthContextProvider>
           <HeaderMenu />
           {children}
