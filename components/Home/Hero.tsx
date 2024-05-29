@@ -19,10 +19,10 @@ export default function Hero() {
       <div className="absolute inset-0 flex justify-center items-center">
         <div className="text-white text-center">
           <h1 className="text-3xl font-bold mb-4 md:text-7xl">O Universo do Cinema<br /> para seu Evento</h1>
-          <p className="text-sm md:text-lg ">CONSTRUINDO PARA DURAR. FEITA POR SONHADORES.</p>
+          <h2 className="text-sm md:text-lg ">CONSTRUINDO PARA DURAR. FEITA POR SONHADORES.</h2>
           <div className="mt-8">
-            <Link href="#servicos">
-              <button type="button" className="bg-white text-black px-6 py-3 rounded-full font-bold text-lg">Quero transformar meu evento</button>
+            <Link href="#feautures">
+              <button type="button" className="bg-white text-black px-6 py-3 rounded-full font-bold text-lg">Quais são os produtos de vocês?</button>
             </Link>
           </div>
           <div className="bg-slate-950 absolute bottom-0 left-0 right-0 py-4 flex justify-center items-center">
@@ -32,7 +32,7 @@ export default function Hero() {
 
                 <Image className="px-6 md:px-12" src="/jyba.png" alt="Logo do Jybá, eleita melhor Pilsen do Brasil" width={170} height={100} />
 
-                <a href="#feedback">
+                <Link href="#feedback">
                   <div className="flex">
                     <Image src="/clientes/gustavo-hermeto.webp" height={32} width={32} alt="Gustavo Hermeto, atual presidente do DA" className="rounded-full my-2" />
                     <Image src="/clientes/giovanna-leone.webp" height={32} width={32} alt="Giovanna Leone, atual presidente do Albatroz" className="  -mx-2 rounded-full my-2" />
@@ -65,7 +65,7 @@ export default function Hero() {
                     </div>
 
                   </div>
-                </a>
+                </Link>
                 <Image className="px-6 md:px-12" src="/albatroz.png" alt="Logo do Albatroz, Diretório Acadêmico de Medicina" width={170} height={100} />
 
                 <Image

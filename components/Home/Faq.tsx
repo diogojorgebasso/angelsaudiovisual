@@ -9,7 +9,8 @@ export default function Faq() {
           <summary className="font-semibold px-4 py-2 text-lg cursor-pointer">Quem contrata a Angels?</summary>
           <div>
             <p className="leading-6 px-10 py-2 transition-shadow">
-              Gostamos de ter Foco. Fazemos <b>Eventos Empresariais e Universitários</b>.
+              Gostamos de ter Foco. Cobrimos <b>Eventos</b>Artísticos, Universitários
+              e Corporativos.
             </p>
             <p className="leading-6 px-10 py-2 transition-shadow">
               Dessa forma, nossa clientela principal engloba esses segmentos. <br />

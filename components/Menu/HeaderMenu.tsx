@@ -1,18 +1,11 @@
-/* eslint-disable @next/next/no-img-element */
-
 'use client';
 
 import { Transition } from '@headlessui/react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState, useRef } from 'react';
-import ModalProfile from './ModalProfile';
-import LoginSubscribeButton from './LoginSubscribeButton';
-
-import { useAuthContext } from '@/context/AuthContext';
 
 export function HeaderMenu() {
-  const { user } = useAuthContext();
   const [isOpen, setIsOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -58,10 +51,6 @@ export function HeaderMenu() {
                   </Link>
 
                 </div>
-                <div>
-                  {user ? <ModalProfile /> : <LoginSubscribeButton />}
-                </div>
-
               </div>
             </div>
           </div>
