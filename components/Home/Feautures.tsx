@@ -6,7 +6,7 @@ export default function Feautures() {
     <section className="mt-20 container mx-auto">
       <div className="mb-16 flex flex-wrap">
         <div className="mb-6 mt-6 w-full shrink-0 grow-0 basis-auto lg:mb-0 lg:w-6/12 lg:pr-6">
-          <video autoPlay muted controls className="w-full h-full object-cover">
+          <video loop autoPlay muted controls className="w-full h-full object-cover">
             <source type="video/mp4" src="https://storage.googleapis.com/angels-audiovisual.appspot.com/Luan.mp4" />
             <track src="/captacao_video_Luan_Santana.vtt" kind="captions" srcLang="pt-BR" />
           </video>
@@ -32,9 +32,11 @@ export default function Feautures() {
       </div>
 
       <div className="mb-16 flex flex-wrap lg:flex-row-reverse">
-        <div className="mb-6 mt-6 relative shrink-0 grow-0 basis-auto lg:mb-0 lg:w-6/12 lg:pr-6">
+        <div className="w-full mb-6 mt-6 shrink-0 grow-0 basis-auto lg:mb-0 lg:w-6/12 lg:pr-6">
           <Image
-            fill
+            width={500}
+            height={300}
+            layout="responsive"
             src="/Publico_correndo.webp"
             objectFit="cover"
             quality={75}
