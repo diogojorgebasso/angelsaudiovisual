@@ -43,7 +43,7 @@ export default function RootLayout({
           content="minimum-scale=1, initial-scale=1, width=device-width,"
         />
       </head>
-      <body className={`${inter.className} bg-primary text-gray-100`}>
+      <body className={`${inter.className} bg-angelspurple text-gray-100`}>
         <AuthContextProvider>
           <HeaderMenu />
           {children}
