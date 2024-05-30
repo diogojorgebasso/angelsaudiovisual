@@ -3,3 +3,23 @@
 @tailwind utilities;
 
 /* Path: app/app.css */
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-left-to-right {
+  animation: slideInLeft 1s ease-out forwards;
+}
+
+.sliding-image {
+  width: 300px;
+}
