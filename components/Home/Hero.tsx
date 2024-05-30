@@ -18,8 +18,8 @@ export default function Hero() {
         <div className="absolute inset-0 bg-black opacity-50" />
         <div className="absolute inset-0 flex justify-center items-center">
           <div className="text-white text-center">
-            <h1 className="text-3xl font-bold mb-4 md:text-7xl">O Universo do Cinema<br /> em seu Evento</h1>
-            <h2 className="text-sm md:text-lg ">CONSTRUINDO PARA DURAR. FEITA POR SONHADORES.</h2>
+            <h1 className="text-3xl font-black mb-4 md:text-7xl">O Universo do Cinema<br /> em seu Evento</h1>
+            <h2 className="text-sm font-extrabold md:text-lg ">CONSTRUINDO PARA DURAR. FEITA POR SONHADORES.</h2>
             <div className="mt-8">
               <Link href="#feautures">
                 <button type="button" className="bg-white text-black px-6 py-3 shadow-inner rounded-full font-bold text-lg">Quero conhecer seus produtos</button>
