@@ -11,7 +11,7 @@ export default function Hero() {
           autoPlay
           muted
           className="absolute inset-0 w-full h-full object-cover"
-          src="https://storage.googleapis.com/angels-audiovisual.appspot.com/Site.mp4"
+          src="/Site.mp4"
         >
           <track src="caption_Anitta.vtt" kind="captions" srcLang="pt-br" label="Descrição em Português Brasil" />
         </video>

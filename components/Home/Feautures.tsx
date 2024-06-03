@@ -8,7 +8,7 @@ export default function Feautures() {
       <div className="mb-16 flex flex-wrap">
         <div className="mb-6 w-full shadow-xl shadow-neutral-900 shrink-0 grow-0 basis-auto lg:mb-0 lg:w-6/12 lg:pr-6">
           <video loop autoPlay muted controls className="w-full h-full object-cover">
-            <source type="video/mp4" src="https://storage.googleapis.com/angels-audiovisual.appspot.com/Luan.mp4" />
+            <source type="video/mp4" src="/Luan.mp4" />
             <track src="/captacao_video_Luan_Santana.vtt" kind="captions" srcLang="pt-BR" />
           </video>
         </div>
