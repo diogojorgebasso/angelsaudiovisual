@@ -9,7 +9,7 @@ export default function Footer() {
       className=" text-center lg:text-left"
     >
       <div
-        className="flex items-center justify-center border-b-2  p-6 dark:border-neutral-500 lg:justify-between"
+        className="flex items-center justify-center border-b-2  p-6 lg:justify-between"
       >
         <div className="mr-12 hidden lg:block">
           <span>Nossas redes sociais</span>
