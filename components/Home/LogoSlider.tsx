@@ -13,7 +13,7 @@ export default function LogoSlider() {
     const startAnimation = () => {
       const animationDuration = 10; // Duration for one slide
       const imageWidth = container!.offsetWidth;
-      const totalWidth = imageWidth * 3; // Adjust based on the number of images
+      const totalWidth = imageWidth * 4; // Adjust based on the number of images
 
       animation = container!.animate(
         [
@@ -21,7 +21,7 @@ export default function LogoSlider() {
           { transform: `translateX(-${totalWidth}px)` },
         ],
         {
-          duration: animationDuration * 3 * 1000, // Adjust based on the number of images
+          duration: animationDuration * 4 * 1000, // Adjust based on the number of images
           iterations: Infinity,
           easing: 'linear',
         }
@@ -40,49 +40,52 @@ export default function LogoSlider() {
   return (
     <div className="mt-4 relative overflow-hidden w-full h-12">
       <div ref={containerRef} className="flex w-full h-full">
-        <div className="flex-shrink-0 w-full h-full relative">
+        <div className="flex-shrink-0 w-1/3  h-full relative">
           <Image
-            src="/marcas/fejemg.svg"
-            alt="Image 1"
-            height={50}
-            width={150}
+            src="/marcas/fejemg.png"
+            alt="Logo FEJEMG"
+            fill
+            objectFit="contain"
           />
         </div>
-        <div className="flex-shrink-0 w-full h-full relative">
+        <div className="flex-shrink-0 w-1/3 h-full relative ">
           <Image
-            src="/marcas/nucleosul.png"
+            src="/marcas/unifeijr.png"
             alt="Image 2"
             fill
+            objectFit="contain"
           />
         </div>
-        <div className="flex-shrink-0 w-full h-full relative">
+        <div className="flex-shrink-0 w-1/3 h-full relative ">
           <Image
             src="/marcas/mfbd.svg"
             alt="Image 3"
             fill
+            objectFit="contain"
           />
         </div>
-        {/* Repeat the images if necessary for a smooth loop */}
-        <div className="flex-shrink-0 w-full h-full relative">
+        <div className="flex-shrink-0 w-1/3 h-full relative ">
           <Image
-            src="/marcas/fejemg.svg"
-            alt="Image X"
-            height={100}
-            width={270}
-          />
-        </div>
-        <div className="flex-shrink-0 w-full h-full relative">
-          <Image
-            src="/image2.jpg"
-            alt="Image 2"
-            fill
-          />
-        </div>
-        <div className="flex-shrink-0 w-full h-full relative">
-          <Image
-            src="/image3.jpg"
+            src="/marcas/nucleosul.png"
             alt="Image 3"
             fill
+            objectFit="contain"
+          />
+        </div>
+        <div className="flex-shrink-0 w-14 h-full relative ">
+          <Image
+            src="/marcas/unifei.svg"
+            alt="Image 3"
+            fill
+            objectFit="contain"
+          />
+        </div>
+        <div className="flex-shrink-0 w-1/3 h-full relative ">
+          <Image
+            src="/marcas/kadu.png"
+            alt="Image 3"
+            fill
+            objectFit="contain"
           />
         </div>
       </div>
