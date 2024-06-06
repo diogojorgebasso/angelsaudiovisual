@@ -46,114 +46,128 @@ export default function LogoSlider() {
         <div className="flex-shrink-0 w-2/5  h-full relative">
           <Image
             src="/marcas/fejemg.png"
-            alt="Logo FEJEMG"
+            alt="Logomarca da FEJEMG - Federação Mineira de Empresas Juniores - negativa"
             fill
-            objectFit="contain"
+            sizes="20vh"
+            className="object-contain"
           />
         </div>
         <div className="flex-shrink-0 w-2/5 h-full relative ">
           <Image
             src="/marcas/unifeijr.png"
-            alt="Image 2"
+            alt="Logomarca da UNIFEI Jr. negativa"
             fill
-            objectFit="contain"
+            sizes="20vh"
+            className="object-contain"
           />
         </div>
         <div className="flex-shrink-0 w-2/5 h-full relative ">
           <Image
             src="/marcas/mfbd.svg"
-            alt="Image 3"
+            alt="Logomarca do escritório MFBD - Maciel, Fernandes, Basso e Dumas Advogados Associados - negativa"
             fill
-            objectFit="contain"
+            sizes="20vh"
+            className="object-contain"
           />
         </div>
         <div className="flex-shrink-0 w-2/5 h-full relative ">
           <Image
             src="/marcas/nucleosul.png"
-            alt="Image 3"
+            alt="Logomarca do Núcleo Sul Mineiro de Empresas Juniores - negativa"
             fill
-            objectFit="contain"
+            sizes="20vh"
+            className="object-contain"
           />
         </div>
         <div className="flex-shrink-0 w-2/5 h-full relative ">
           <Image
             src="/marcas/unifei.svg"
-            alt="Image 3"
+            alt="Logomarca da UNIFEI - Universidade Federal de Itajubá - negativa"
             fill
-            objectFit="contain"
+            sizes="20vh"
+            className="object-contain"
           />
         </div>
         <div className="flex-shrink-0 w-2/5 h-full relative ">
           <Image
             src="/marcas/kadu.png"
-            alt="Image 3"
+            alt="Logo do Kadu Eventos - 25 anos - negativa"
             fill
-            objectFit="contain"
+            sizes="20vh"
+            className="object-contain"
           />
         </div>
         <div className="flex-shrink-0 w-2/5 h-full relative ">
           <Image
             src="/marcas/portalfamosos.svg"
-            alt="Image 3"
+            alt="Logomarca do Portal Famosos Brasil - negativa"
             fill
-            objectFit="contain"
+            sizes="20vh"
+            className="object-contain"
           />
         </div>
         {/* Duplicate */}
         <div className="flex-shrink-0 w-2/5 h-full relative">
           <Image
             src="/marcas/fejemg.png"
-            alt="Logo FEJEMG"
+            alt="Logomarca da FEJEMG - Federação Mineira de Empresas Juniores - negativa"
             fill
-            objectFit="contain"
+            sizes="20vh"
+            className="object-contain"
           />
         </div>
         <div className="flex-shrink-0 w-2/5 h-full relative ">
           <Image
             src="/marcas/unifeijr.png"
-            alt="Image 2"
+            alt="Logomarca da UNIFEI Jr. negativa"
             fill
-            objectFit="contain"
+            sizes="20vh"
+            className="object-contain"
           />
         </div>
         <div className="flex-shrink-0 w-2/5 h-full relative ">
           <Image
             src="/marcas/mfbd.svg"
-            alt="Image 3"
+            alt="Logo do escritório MFBD - Maciel, Fernandes, Basso e Dumas Advogados Associados - negativa"
             fill
-            objectFit="contain"
+            sizes="20vh"
+            className="object-contain"
           />
         </div>
         <div className="flex-shrink-0 w-2/5 h-full relative ">
           <Image
             src="/marcas/nucleosul.png"
-            alt="Image 3"
+            alt="Logo do Núcleo Sul Mineiro de Empresas Juniores - negativa"
             fill
-            objectFit="contain"
+            sizes="20vh"
+            className="object-contain"
           />
         </div>
         <div className="flex-shrink-0 w-2/5 h-full relative ">
           <Image
             src="/marcas/unifei.svg"
-            alt="Image 3"
+            alt="Logo da UNIFEI - Universidade Federal de Itajubá - negativa"
             fill
-            objectFit="contain"
+            sizes="20vh"
+            className="object-contain"
           />
         </div>
         <div className="flex-shrink-0 w-2/5 h-full relative ">
           <Image
             src="/marcas/kadu.png"
-            alt="Image 3"
+            alt="Logo do Kadu Eventos - 25 anos - negativa"
             fill
-            objectFit="contain"
+            sizes="20vh"
+            className="object-contain"
           />
         </div>
         <div className="flex-shrink-0 w-2/5 h-full relative ">
           <Image
             src="/marcas/portalfamosos.svg"
-            alt="Image 3"
+            alt="Logo do Portal Famosos Brasil - negativa"
             fill
-            objectFit="contain"
+            sizes="20vh"
+            className="object-contain"
           />
         </div>
       </div>

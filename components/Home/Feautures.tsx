@@ -52,10 +52,10 @@ export default function Feautures() {
           <Image
             width={500}
             height={300}
-            layout="responsive"
             src="/Publico_correndo.webp"
-            objectFit="cover"
+            className="object-contain responsive w-auto h-auto"
             quality={75}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw,"
             alt="Menina correndo para pegar o prêmio. Evento privado em BH."
           />
         </div>
