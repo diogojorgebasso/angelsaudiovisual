@@ -11,17 +11,20 @@ export default function LogoSlider() {
     let animation: Animation | null = null;
 
     const startAnimation = () => {
-      const animationDuration = 10; // Duration for one slide
-      const imageWidth = container!.offsetWidth;
-      const totalWidth = imageWidth * 4; // Adjust based on the number of images
+      const images = container!.children;
+      let totalWidth = 0;
+
+      for (let i = 0; i < images.length; i += 1) {
+        totalWidth += (images[i] as HTMLElement).offsetWidth;
+      }
 
       animation = container!.animate(
         [
           { transform: 'translateX(0px)' },
-          { transform: `translateX(-${totalWidth}px)` },
+          { transform: `translateX(-${totalWidth}px)` }, // Translate by half the total width
         ],
         {
-          duration: animationDuration * 4 * 1000, // Adjust based on the number of images
+          duration: totalWidth * 8, // Adjust based on the total width
           iterations: Infinity,
           easing: 'linear',
         }
@@ -40,7 +43,7 @@ export default function LogoSlider() {
   return (
     <div className="mt-4 relative overflow-hidden w-full h-12">
       <div ref={containerRef} className="flex w-full h-full">
-        <div className="flex-shrink-0 w-1/3  h-full relative">
+        <div className="flex-shrink-0 w-2/5  h-full relative">
           <Image
             src="/marcas/fejemg.png"
             alt="Logo FEJEMG"
@@ -48,7 +51,7 @@ export default function LogoSlider() {
             objectFit="contain"
           />
         </div>
-        <div className="flex-shrink-0 w-1/3 h-full relative ">
+        <div className="flex-shrink-0 w-2/5 h-full relative ">
           <Image
             src="/marcas/unifeijr.png"
             alt="Image 2"
@@ -56,7 +59,7 @@ export default function LogoSlider() {
             objectFit="contain"
           />
         </div>
-        <div className="flex-shrink-0 w-1/3 h-full relative ">
+        <div className="flex-shrink-0 w-2/5 h-full relative ">
           <Image
             src="/marcas/mfbd.svg"
             alt="Image 3"
@@ -64,7 +67,7 @@ export default function LogoSlider() {
             objectFit="contain"
           />
         </div>
-        <div className="flex-shrink-0 w-1/3 h-full relative ">
+        <div className="flex-shrink-0 w-2/5 h-full relative ">
           <Image
             src="/marcas/nucleosul.png"
             alt="Image 3"
@@ -72,7 +75,7 @@ export default function LogoSlider() {
             objectFit="contain"
           />
         </div>
-        <div className="flex-shrink-0 w-14 h-full relative ">
+        <div className="flex-shrink-0 w-2/5 h-full relative ">
           <Image
             src="/marcas/unifei.svg"
             alt="Image 3"
@@ -80,9 +83,74 @@ export default function LogoSlider() {
             objectFit="contain"
           />
         </div>
-        <div className="flex-shrink-0 w-1/3 h-full relative ">
+        <div className="flex-shrink-0 w-2/5 h-full relative ">
           <Image
             src="/marcas/kadu.png"
+            alt="Image 3"
+            fill
+            objectFit="contain"
+          />
+        </div>
+        <div className="flex-shrink-0 w-2/5 h-full relative ">
+          <Image
+            src="/marcas/portalfamosos.svg"
+            alt="Image 3"
+            fill
+            objectFit="contain"
+          />
+        </div>
+        {/* Duplicate */}
+        <div className="flex-shrink-0 w-2/5 h-full relative">
+          <Image
+            src="/marcas/fejemg.png"
+            alt="Logo FEJEMG"
+            fill
+            objectFit="contain"
+          />
+        </div>
+        <div className="flex-shrink-0 w-2/5 h-full relative ">
+          <Image
+            src="/marcas/unifeijr.png"
+            alt="Image 2"
+            fill
+            objectFit="contain"
+          />
+        </div>
+        <div className="flex-shrink-0 w-2/5 h-full relative ">
+          <Image
+            src="/marcas/mfbd.svg"
+            alt="Image 3"
+            fill
+            objectFit="contain"
+          />
+        </div>
+        <div className="flex-shrink-0 w-2/5 h-full relative ">
+          <Image
+            src="/marcas/nucleosul.png"
+            alt="Image 3"
+            fill
+            objectFit="contain"
+          />
+        </div>
+        <div className="flex-shrink-0 w-2/5 h-full relative ">
+          <Image
+            src="/marcas/unifei.svg"
+            alt="Image 3"
+            fill
+            objectFit="contain"
+          />
+        </div>
+        <div className="flex-shrink-0 w-2/5 h-full relative ">
+          <Image
+            src="/marcas/kadu.png"
+            alt="Image 3"
+            fill
+            objectFit="contain"
+          />
+        </div>
+        <div className="flex-shrink-0 w-2/5 h-full relative ">
+          <Image
+            src="/marcas/portalfamosos.svg"
             alt="Image 3"
             fill
             objectFit="contain"
