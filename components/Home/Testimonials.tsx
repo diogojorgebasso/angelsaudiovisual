@@ -55,14 +55,14 @@ export default function Testimonials() {
                   </div>
                 </div>
                 <div className="p-6 rounded shadow-md ">
-                  <p>Foi incrível trabalhar lado a lado da Angels.
-                    E sou exigente, hein! 🤜
+                  <p>Para quem deseja uma empresa que tem o comprometimento como
+                    premissa, vale cada centavo investido
                   </p>
                   <div className="flex items-center mt-4 space-x-4">
                     <img loading="lazy" width={48} height={48} src="/clientes/clayton_tenorio.png" alt="Imagem de Perfil do Clayton Tenório" className="bg-center bg-cover rounded-full" />
                     <div>
                       <p className="text-lg font-semibold">Clayton Tenório</p>
-                      <p className="text-sm ">Diretor Artístico do Especial de tributo à Gal Costa</p>
+                      <p className="text-sm">Produtor Cultural</p>
                     </div>
                   </div>
                 </div>

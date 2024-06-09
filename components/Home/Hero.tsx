@@ -22,16 +22,16 @@ export default function Hero() {
             <h2 className="text-sm font-extrabold md:text-lg ">CONSTRUINDO PARA DURAR. FEITA POR SONHADORES.</h2>
             <div className="mt-8">
               <Link href="#feautures">
-                <button type="button" className="bg-white text-black px-6 py-3 shadow-inner rounded-full font-bold text-lg">Quero conhecer seus produtos</button>
+                <button type="button" className="bg-white text-black px-6 py-3 shadow-inner rounded-full font-bold text-lg">Comece de graça - sem CC</button>
               </Link>
             </div>
             <div className="bg-slate-950 flex py-4 absolute bottom-0 left-0 right-0 justify-center">
 
               <Link href="#feedback">
                 <div className="flex">
-                  <Image src="/clientes/luana_brandao.webp" height={32} width={32} alt="Gustavo Hermeto, atual presidente do DA" className="-mx-2 rounded-full my-2" />
-                  <Image src="/clientes/clayton_tenorio.png" height={32} width={32} alt="Giovanna Leone, atual presidente do Albatroz" className="  -mx-2 rounded-full my-2" />
-                  <Image src="/clientes/Samira_batalha.webp" height={32} width={32} alt="Raquel Beyoha, atual presidente do EPA" className="-mx-2 rounded-full my-2" />
+                  <Image src="/clientes/luana_brandao.webp" height={32} width={32} alt="Luana Brandão, Coordenadora de Comunicação do Núcleo Sul 2023" className="-mx-2 rounded-full my-2" />
+                  <Image src="/clientes/clayton_tenorio.png" height={32} width={32} alt="Clayton Tenório, Produtor Cultural" className="  -mx-2 rounded-full my-2" />
+                  <Image src="/clientes/Samira_batalha.webp" height={32} width={32} alt="Samira Batalha, Coordenadora de Comunicação do EDL Minas" className="-mx-2 rounded-full my-2" />
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="white" className="h-8 w-8 -mx-2 my-2">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
