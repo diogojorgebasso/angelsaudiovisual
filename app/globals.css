@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Path: app/app.css */
-
 @keyframes slideInLeft {
   from {
     transform: translateX(-100%);
