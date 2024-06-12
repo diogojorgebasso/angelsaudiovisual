@@ -43,11 +43,11 @@ export default function Sidebar() {
   ];
 
   return (
-    <section className="w-[100px] border-r h-scren">
-      <ul>
+    <section className="w-[100px] border-r h-scren p-6">
+      <ul className="w-full flex flex-col gap-6">
         {link.map((item, index) => (
           <Link key={index} href={item.href}>
-            <li>{item.icon}<span>{item.name}</span></li>
+            <li className="flex gap-3 items-center rounded-full px-4 py-2">{item.icon}<span>{item.name}</span></li>
           </Link>
         ))}
       </ul>

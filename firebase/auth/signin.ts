@@ -1,17 +1,17 @@
-import { signInWithEmailLink, getAuth, signInWithPopup, FacebookAuthProvider, GoogleAuthProvider } from 'firebase/auth';
+import { signInWithEmailAndPassword, getAuth, signInWithPopup, FacebookAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 import firebaseApp from '../config';
 import getData from '../firestore/getData';
 
 const auth = getAuth(firebaseApp);
 
-export default async function signIn(email: string) {
+export default async function signIn(email: string, password: string) {
   let error = null;
   let result = null;
   try {
-    const response: any = await signInWithEmailLink(auth, email, 'http://angelsaudiovisual.com/cadastrar');
+    const response: any = await signInWithEmailAndPassword(auth, email, password);
     result = await getData('users', response.user.uid);
   } catch (errorInRequest) {
-    error = ({ error });
+    error = errorInRequest;
   }
   return { result, error };
 }

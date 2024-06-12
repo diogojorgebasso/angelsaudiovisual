@@ -51,6 +51,7 @@ export default function Page() {
                   type="button"
                   data-te-ripple-init
                   data-te-ripple-color="light"
+                  aria-label="Facebook login button"
                   onClick={handleFacebook}
                   className="mx-1 h-9 w-9 rounded-full bg-primary uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:bg-primary-600 focus:outline-none focus:ring-0 "
                 >
@@ -69,6 +70,7 @@ export default function Page() {
                 {/* Google */}
                 <button
                   type="button"
+                  aria-label="Google login button"
                   data-te-ripple-init
                   data-te-ripple-color="light"
                   onClick={handleGoogle}
@@ -98,6 +100,7 @@ export default function Page() {
                   className="peer block min-h-[auto] w-full rounded border-0 px-3 py-[0.32rem] leading-[2.15] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                   id="exampleFormControlInput2"
                   placeholder="Email address"
+                  autoComplete="email"
                 />
                 Endereço de Email
               </div>
@@ -106,9 +109,10 @@ export default function Page() {
                 <input
                   type="text"
                   className="peer block min-h-[auto] w-full rounded border-0 px-3 py-[0.32rem] leading-[2.15] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                  id="email"
+                  id="password"
                   placeholder="Senha"
-                  name="email"
+                  name="password"
+                  autoComplete="off"
                 />
                 Senha
               </div>
@@ -117,11 +121,11 @@ export default function Page() {
               <div className="text-center lg:text-left">
                 <button
                   type="submit"
-                  className=" g-recaptcha inline-block rounded bg-primary px-7 pb-2.5 pt-3 text-sm font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+                  className=" g-recaptcha inline-block rounded bg-primary px-7 pb-2.5 pt-3 text-sm font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600"
                   data-te-ripple-init
                   data-te-ripple-color="light"
                   onClick={handleForm}
-                  data-sitekey="reCAPTCHA_site_key"
+                  data-sitekey="6LccmLwoAAAAAOOkcR1KmHV0Ovg0avYFBIaW7v0P"
                   data-callback="onSubmit"
                   data-action="submit"
                 >

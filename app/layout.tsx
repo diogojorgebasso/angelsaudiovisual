@@ -37,11 +37,6 @@ export default function RootLayout({
         <link rel="manifest" href="/site.webmanifest" />
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#40032b" />
         <meta name="msapplication-TileColor" content="#40032b" />
-        <meta name="theme-color" content="#40032b" />
-        <meta
-          name="viewport"
-          content="minimum-scale=1, initial-scale=1, width=device-width,"
-        />
       </head>
       <body className={`${inter.className} bg-angelspurple text-gray-100`}>
         <AuthContextProvider>
