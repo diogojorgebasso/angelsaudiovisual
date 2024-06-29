@@ -16,7 +16,7 @@ export function HeaderMenu() {
           <div className="flex items-center">
             <div className="flex-shrink-0">
               <Link href="/">
-                <Image width={50} height={50} src="angels.svg" alt="Logo da Angels Audiovisual" />
+                <Image priority width={50} height={50} src="angels.svg" alt="Logo da Angels Audiovisual" />
               </Link>
             </div>
             <div className="hidden md:block">
